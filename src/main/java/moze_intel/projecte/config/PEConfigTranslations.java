@@ -97,6 +97,9 @@ public enum PEConfigTranslations implements IConfigTranslation {
 			+ "like it did in ProjectE before version 1.4.4."),
 	SERVER_ITEMS_HARVEST_BAND_INDIRECT("server.items.harvest_band_indirect", "Harvest Band Indirect",
 			"Allows the Harvest Goddess Band to passively grow things like tall grass, flowers, etc, on top of grass blocks and nylium. Also allows it to make moss spread."),
+	SERVER_ITEMS_HARVEST_BAND_PICK_HARVEST("server.items.harvest_band_pick_harvest", "Harvest Band Pick Harvest",
+			"When harvesting mature crops, only drops the crop product and resets the plant to its initial growth stage instead of breaking the block. "
+			+ "Seed items are not dropped, so plants like Mystical Agriculture crops keep their planted seed."),
 	SERVER_ITEMS_DISABLE_ALL_RADIUS_MINING("server.items.disable_all_radius_mining", "Disable All Radius Mining",
 			"If set to true, disables all radius-based mining functionality (right click of tools)."),
 	SERVER_ITEMS_TIME_WATCH("server.items.time_watch", "Watch of Flowing Time", "Enables the Watch of Flowing Time."),

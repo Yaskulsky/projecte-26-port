@@ -471,10 +471,74 @@ public final class WorldHelper {
 		if (harvest && shouldHarvest(level, pos, state)) {
 			if (player == null || PlayerHelper.hasEditPermission(player, level, pos)) {
 				if (!(player instanceof ServerPlayer serverPlayer) || PlayerHelper.checkBreakPermission(serverPlayer, level, pos)) {
+					if (ProjectEConfig.server.items.harvBandPickHarvest.get() && tryPickHarvest(level, pos, state, player)) {
+						return;
+					}
 					level.destroyBlock(pos, true, player);
 				}
 			}
 		}
+	}
+
+	/**
+	 * Harvests crop products without breaking the plant or dropping seeds.
+	 *
+	 * @return {@code true} if pick harvesting was performed
+	 */
+	private static boolean tryPickHarvest(Level level, BlockPos pos, BlockState state, @Nullable Player player) {
+		if (!(level instanceof ServerLevel serverLevel)) {
+			return false;
+		}
+		Block block = state.getBlock();
+		BlockState resetState = getPickHarvestResetState(level, pos, state, block);
+		if (resetState == null) {
+			return false;
+		}
+		BlockEntity blockEntity = state.hasBlockEntity() ? level.getBlockEntity(pos) : null;
+		List<ItemStack> drops = Block.getDrops(state, serverLevel, pos, blockEntity, player, ItemStack.EMPTY);
+		List<ItemStack> products = filterHarvestProductDrops(drops);
+		if (products.isEmpty()) {
+			return false;
+		}
+		createLootDrop(products, level, pos);
+		level.setBlock(pos, resetState, Block.UPDATE_ALL);
+		level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, resetState));
+		return true;
+	}
+
+	@Nullable
+	private static BlockState getPickHarvestResetState(Level level, BlockPos pos, BlockState state, Block block) {
+		if (block instanceof CropBlock cropBlock) {
+			return cropBlock.isMaxAge(state) ? cropBlock.getStateForAge(0) : null;
+		} else if (isPickHarvestSpecialCase(block)) {
+			return null;
+		}
+		IntegerProperty ageProperty = getAgeProperty(block, state);
+		if (ageProperty == null || state.getValue(ageProperty) != ageProperty.max) {
+			return null;
+		}
+		return state.setValue(ageProperty, ageProperty.getPossibleValues().getFirst());
+	}
+
+	private static boolean isPickHarvestSpecialCase(Block block) {
+		//These blocks use custom break logic to preserve regrowth and should keep using destroyBlock.
+		return block instanceof BambooStalkBlock || block instanceof SugarCaneBlock || block instanceof CactusBlock
+				|| block instanceof GrowingPlantBlock || block instanceof LeavesBlock || block instanceof VineBlock
+				|| block instanceof GlowLichenBlock;
+	}
+
+	private static List<ItemStack> filterHarvestProductDrops(List<ItemStack> drops) {
+		List<ItemStack> products = new ArrayList<>();
+		for (ItemStack drop : drops) {
+			if (!drop.isEmpty() && !isHarvestSeedDrop(drop)) {
+				products.add(drop);
+			}
+		}
+		return products;
+	}
+
+	private static boolean isHarvestSeedDrop(ItemStack stack) {
+		return stack.is(PETags.Items.PLANTABLE_SEEDS);
 	}
 
 	private static boolean shouldHarvest(Level level, BlockPos pos, BlockState state) {
@@ -505,25 +569,7 @@ public final class WorldHelper {
 		//Fallback handling for any states that have an age declared, but are not at the max age
 		// Things like sugar cane that are partially grown, get handled above, so won't be prevented from being harvested by this
 		// but things like nether wart, will be handled by this
-		IntegerProperty ageProperty = null;
-		//Note: We can't use computeIfAbsent, as we explicitly want to not compute if there is a stored value equal to null
-		if (AGE_PROPERTIES.containsKey(block)) {
-			//If we have a cached value, grab it
-			ageProperty = AGE_PROPERTIES.get(block);
-		} else {
-			//Figure out what age property this block uses
-			for (Property.Value<?> entry : state.getValues().toList()) {
-				Property<?> property = entry.property();
-				if (property.getName().equals("age")) {
-					if (property instanceof IntegerProperty intProperty) {
-						//It is a type of property we understand how to handle
-						ageProperty = intProperty;
-					}
-					break;
-				}
-			}
-			AGE_PROPERTIES.put(block, ageProperty);
-		}
+		IntegerProperty ageProperty = getAgeProperty(block, state);
 		//If the block doesn't have an age property, or it is at the max age. Allow harvesting
 		return ageProperty == null || state.getValue(ageProperty) == ageProperty.max;
 	}
@@ -531,6 +577,24 @@ public final class WorldHelper {
 	/**
 	 * The instances this method checks exist to do our best to support modded versions out of the box, as there aren't vanilla or neo tags for these types.
 	 */
+	@Nullable
+	private static IntegerProperty getAgeProperty(Block block, BlockState state) {
+		//Note: We can't use computeIfAbsent, as we explicitly want to not compute if there is a stored value equal to null
+		if (AGE_PROPERTIES.containsKey(block)) {
+			return AGE_PROPERTIES.get(block);
+		}
+		IntegerProperty ageProperty = null;
+		for (Property.Value<?> entry : state.getValues().toList()) {
+			Property<?> property = entry.property();
+			if (property.getName().equals("age") && property instanceof IntegerProperty intProperty) {
+				ageProperty = intProperty;
+				break;
+			}
+		}
+		AGE_PROPERTIES.put(block, ageProperty);
+		return ageProperty;
+	}
+
 	public static boolean isUnharvestableImplementation(Block block) {
 		//Instance check for blocks that get handled because of being plantable from the instanceof BushBlock check
 		//Note: We can't just include these by default in the blacklist harvest tag, as then we might harvest modded ones that we don't want to

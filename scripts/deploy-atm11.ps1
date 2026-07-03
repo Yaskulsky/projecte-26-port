@@ -37,7 +37,7 @@ if (-not (Test-Path $jar)) {
 Write-Host "=== Verifying JAR ===" -ForegroundColor Cyan
 & (Join-Path $root "scripts\port-check.ps1") -VerifyJar -Quiet
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "JAR verify failed — not deploying." -ForegroundColor Red
+    Write-Host "JAR verify failed - not deploying." -ForegroundColor Red
     exit 1
 }
 
@@ -50,4 +50,4 @@ if (-not (Test-Path $destDir)) {
 Write-Host "=== Deploying ===" -ForegroundColor Cyan
 Copy-Item -Force $jar $dest
 Write-Host "Copied to $dest" -ForegroundColor Green
-Write-Host "Start ATM11 and check log for: Registered * EMC values" -ForegroundColor Cyan
+Write-Host "Start ATM11 and check log for EMC registration count" -ForegroundColor Cyan

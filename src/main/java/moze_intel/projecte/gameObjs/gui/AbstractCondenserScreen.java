@@ -19,18 +19,8 @@ public abstract class AbstractCondenserScreen<T extends CondenserContainer> exte
 		super(condenser, playerInventory, title, 255, 233);
 	}
 
-	protected int getPlayerInventoryLabelX() {
-		return 48;
-	}
-
-	protected int getPlayerInventoryLabelY() {
-		return 142;
-	}
-
 	@Override
 	protected void extractLabels(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
-		graphics.text(font, title, (imageWidth - font.width(title)) / 2, 4, PEGuiGraphics.LABEL_COLOR, false);
-		graphics.text(font, playerInventoryTitle, getPlayerInventoryLabelX(), getPlayerInventoryLabelY(), PEGuiGraphics.LABEL_COLOR, false);
 		peExtractLabels(graphics, mouseX, mouseY);
 	}
 

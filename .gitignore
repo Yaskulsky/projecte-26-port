@@ -1,30 +1,49 @@
-# Build / Gradle
-.gradle/
+# IntelliJ
+/*.iml
+.idea/
+*.ipr
+*.iws
+.idea_modules/
+out/
+
+# Gradle
+.gradle
 build/
 run/
 logs/
-out/
-bin/
 
-# IDE
-.idea/
-*.iml
-.vscode/
-.classpath
+# Eclipse + other common
+*.pydevproject
 .project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
 .settings/
+*.launch
+eclipse/
+libs/
 
-# OS
+# Windows
 Thumbs.db
+ehthumbs.db
 Desktop.ini
-.DS_Store
+$RECYCLE.BIN/
 
-# Local port tooling (not needed to build)
+# Local dev / extract (not in git)
 .mc-src/
 .mc-src-extract/
 .nf-src/
 net/
-
-# Debug logs
 compile-*.txt
 build-latest.txt
+
+# Cursor / IDE agent (local only)
+.cursor/
+AGENTS.md
+.vscode/
