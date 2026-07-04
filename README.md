@@ -1,43 +1,43 @@
 ![](/src/main/resources/logo.png?raw=true)
 
-# ProjectE — port MC 26.1.2
+# ProjectE — MC 26.1.2 port
 
-Nieoficjalny port ProjectE na **Minecraft 26.1.2** / **NeoForge**.  
-Utrzymywany przez **Yaskulsky**.
+Unofficial port of ProjectE for **Minecraft 26.1.2** / **NeoForge**.  
+Maintained by **Yaskulsky**.
 
-Stoły transmutacji, kolektory, kondensatory, pierścienie, EMC — pełna mechanika ProjectE / EE2-style.
+Transmutation tables, collectors, condensers, rings, EMC — full ProjectE / EE2-style gameplay.
 
 | | |
 |---|---|
-| **Wersja moda** | 1.2.0 |
+| **Mod version** | 1.2.0 |
 | **Minecraft** | 26.1.2 |
 | **NeoForge** | 26.1.2.7-beta+ |
-| **Licencja** | MIT |
+| **License** | MIT |
 
-Kod bazowy: [ProjectE](https://github.com/sinkillerj/ProjectE) (MIT, Sin Tachikawa i współautorzy).
+Base code: [ProjectE](https://github.com/sinkillerj/ProjectE) (MIT, Sin Tachikawa and contributors).
 
 ---
 
-# Błędy
+# Bug reports
 
 https://github.com/Yaskulsky/projecte-26-port/issues
 
-Przed zgłoszeniem: najnowszy build, wersja Minecraft + NeoForge, lista modów, log / crash report (np. Pastebin).
+Before reporting: latest build, Minecraft + NeoForge version, mod list, log / crash report (e.g. Pastebin).
 
 ---
 
-# Pobieranie
+# Downloads
 
 - **Releases:** https://github.com/Yaskulsky/projecte-26-port/releases
-- CurseForge / Modrinth — *[wstaw link po publikacji]*
+- CurseForge / Modrinth — *[add link after publishing]*
 
 ---
 
-# Wsparcie
+# Support
 
 https://buymeacoffee.com/yaskulsky
 
-Opcjonalne — mod jest darmowy (MIT).
+Optional — the mod is free (MIT).
 
 ---
 
@@ -47,10 +47,10 @@ https://discord.gg/TWOJ_LINK
 
 ---
 
-# Autor portu
+# Port author
 
 **Yaskulsky**  
 - GitHub: https://github.com/Yaskulsky  
 - Repo: https://github.com/Yaskulsky/projecte-26-port
 
-Opisy pod CurseForge / Modrinth: `PUBLISHING.md`
+CurseForge / Modrinth copy: see `PUBLISHING.md`
