@@ -1,56 +1,56 @@
 ![](/src/main/resources/logo.png?raw=true)
 
-Repository for ProjectE, a complete rewrite of EE2 (Equivalent Exchange 2) for modern Minecraft versions. Transmutation tables, collectors, condensers, flying rings, and all the other trinkets you love are here.
+# ProjectE — port MC 26.1.2
 
-Discover powerful alchemical tools, items, and devices. Break down unwanted items into EMC (Energy-Matter Covalence) and use that EMC to create new items.
+Nieoficjalny port ProjectE na **Minecraft 26.1.2** / **NeoForge**.  
+Utrzymywany przez **Yaskulsky**.
 
+Stoły transmutacji, kolektory, kondensatory, pierścienie, EMC — pełna mechanika ProjectE / EE2-style.
 
-# I found a bug
-Bugs can be reported at: https://github.com/sinkillerj/ProjectE/issues
+| | |
+|---|---|
+| **Wersja moda** | 1.2.0 |
+| **Minecraft** | 26.1.2 |
+| **NeoForge** | 26.1.2.7-beta+ |
+| **Licencja** | MIT |
 
-Please try the latest release build before reporting, be sure to also include any logs or steps to reproduce you may have, as well as your Forge version, and whether or not you are using a third party loader such as Cauldron. When submitting logs please use a service such as Pastebin, do not paste the log directly into the issue.
+Kod bazowy: [ProjectE](https://github.com/sinkillerj/ProjectE) (MIT, Sin Tachikawa i współautorzy).
 
-# Downloads
-https://www.curseforge.com/minecraft/mc-mods/projecte/files
+---
 
-# Support Development
-![](/patreon.png?raw=true)
+# Błędy
 
-We accept donations via Patreon and other methods, visit the team members section to learn more.
+https://github.com/Yaskulsky/projecte-26-port/issues
 
-# Join the Conversation
+Przed zgłoszeniem: najnowszy build, wersja Minecraft + NeoForge, lista modów, log / crash report (np. Pastebin).
 
-Discord: https://discord.gg/fkpxV5Z
+---
 
-# Current Team Members
-Members actively working on ProjectE.
+# Pobieranie
 
-SinKillerJ - Head of Alchemical Studies - Main Project & Community Lead:
+- **Releases:** https://github.com/Yaskulsky/projecte-26-port/releases
+- CurseForge / Modrinth — *[wstaw link po publikacji]*
 
-* Bluesky: https://bsky.app/profile/sinkillerj.bsky.social
-* Patreon: https://www.patreon.com/sinkillerj
+---
 
-pupnewfster - Alchemical Adaptation - Lead of New Version Ports
+# Wsparcie
 
-* Bluesky: https://bsky.app/profile/sara.freimer.dev
-* GitHub Sponsors: https://github.com/sponsors/pupnewfster
-* Ko-fi: https://ko-fi.com/pupnewfster
-* Patreon: https://www.patreon.com/pupnewfster
+https://buymeacoffee.com/yaskulsky
 
-MaPePeR(Blubberbub) - Alchemical Value Archivist - Lead EMC Mapper Developer: 
+Opcjonalne — mod jest darmowy (MIT).
 
-* Twitter: https://twitter.com/Blubb3rbub
+---
 
-# Former Team Members
-MozeIntel - Original lead developer: https://twitter.com/Moze_Intel
+# Discord
 
-Kolatra - Former collaborator: https://twitter.com/ItsKolatra
+https://discord.gg/TWOJ_LINK
 
-Williewillus - Maintainer, 1.8.x-1.13.x: https://twitter.com/williewillus
+---
 
-Lilylicious - Assistant Developer: https://twitter.com/Lilyliciously
+# Autor portu
 
-# Thanks To
-x3n0ph0b3 - EE2 creator, Allowed use of EE2 assets: https://twitter.com/x3n0ph0b3x
+**Yaskulsky**  
+- GitHub: https://github.com/Yaskulsky  
+- Repo: https://github.com/Yaskulsky/projecte-26-port
 
-MidnightLightning - EE2 GUI Textures: https://github.com/MidnightLightning
+Opisy pod CurseForge / Modrinth: `PUBLISHING.md`
