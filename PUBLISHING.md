@@ -13,7 +13,7 @@
 | **GitHub repo** | https://github.com/Yaskulsky/projecte-26-port |
 | **Issues** | https://github.com/Yaskulsky/projecte-26-port/issues |
 | **Buy Me a Coffee** | https://buymeacoffee.com/yaskulsky |
-| **Discord** | https://discord.gg/TWOJ_LINK *(replace with your invite)* |
+| **Discord** | https://discord.gg/PBVGpRJeB |
 
 Base code: [ProjectE](https://github.com/sinkillerj/ProjectE) (MIT).
 
@@ -216,7 +216,7 @@ Maintained by Yaskulsky.
 📥 Modrinth: [LINK]
 🐛 Issues: https://github.com/Yaskulsky/projecte-26-port/issues
 ☕ Support (optional): https://buymeacoffee.com/yaskulsky
-💬 Discord: [YOUR_INVITE]
+💬 Discord: https://discord.gg/PBVGpRJeB
 
 MIT licensed — free mod. Donations optional. Backup your world!
 ```

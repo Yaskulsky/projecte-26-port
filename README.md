@@ -43,7 +43,7 @@ Optional — the mod is free (MIT).
 
 # Discord
 
-https://discord.gg/TWOJ_LINK
+https://discord.gg/PBVGpRJeB
 
 ---
 
