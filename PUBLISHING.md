@@ -106,6 +106,11 @@ Paste into the **Description** field on CurseForge.
   <strong>Not required</strong> — the mod stays free (MIT).
 </p>
 
+<h2>Discord</h2>
+<p>
+  <a href="https://discord.gg/PBVGpRJeB" rel="nofollow">discord.gg/PBVGpRJeB</a>
+</p>
+
 <h2>Disclaimer</h2>
 <p>
   Provided “as is”, without warranty. Community port only — back up your world before updating.
@@ -157,6 +162,10 @@ https://github.com/Yaskulsky/projecte-26-port/issues
 [Buy Me a Coffee — Yaskulsky](https://buymeacoffee.com/yaskulsky)
 
 The mod is and remains **free** (MIT).
+
+## Discord
+
+https://discord.gg/PBVGpRJeB
 
 ## Disclaimer
 
