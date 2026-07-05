@@ -9,7 +9,17 @@ $ErrorActionPreference = "Continue"
 $root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 Set-Location $root
 
-$jar = Join-Path $root "build\libs\projecte-1.2.0.jar"
+$jar = Get-ChildItem (Join-Path $root "build\libs") -Filter "projectee-*.jar" -ErrorAction SilentlyContinue |
+    Where-Object { $_.Name -notmatch 'sources|api' } |
+    Sort-Object LastWriteTime -Descending |
+    Select-Object -First 1
+if (-not $jar) {
+    $jar = Get-ChildItem (Join-Path $root "build\libs") -Filter "projecte-*.jar" -ErrorAction SilentlyContinue |
+        Where-Object { $_.Name -notmatch 'sources|api' } |
+        Sort-Object LastWriteTime -Descending |
+        Select-Object -First 1
+}
+$jar = if ($jar) { $jar.FullName } else { Join-Path $root "build\libs\projectee-1.2.2.jar" }
 $src = Join-Path $root "src\main\java"
 
 function Write-Finding($severity, $message) {

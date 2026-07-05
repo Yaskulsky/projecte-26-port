@@ -71,10 +71,12 @@ public class GUIRelay<CONTAINER extends RelayMK1Container> extends PEContainerSc
 
 
 	@Override
+	protected void extractLabels(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
+		peExtractLabels(graphics, mouseX, mouseY);
+	}
 
+	@Override
 	protected void peExtractLabels(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
-
-		graphics.text(font, title, titleLabelX, titleLabelY, PEGuiGraphics.LABEL_COLOR, false);
 
 		graphics.text(font, EMCHelper.formatEmc(menu.emc.get()), emcX, emcY, PEGuiGraphics.LABEL_COLOR, false);
 

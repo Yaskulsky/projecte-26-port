@@ -11,7 +11,6 @@ import moze_intel.projecte.api.capabilities.item.IPedestalItem;
 import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.gameObjs.registries.PEDataComponentTypes;
 import moze_intel.projecte.integration.IntegrationHelper;
-import moze_intel.projecte.utils.ItemCapabilityHelper;
 import moze_intel.projecte.utils.ItemHelper;
 import moze_intel.projecte.utils.MathUtils;
 import moze_intel.projecte.utils.PlayerHelper;
@@ -23,13 +22,14 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -112,8 +112,23 @@ public class RepairTalisman extends ItemPE implements IAlchBagItem, IAlchChestIt
 	}
 
 	private static void repairAllItems(Player player) {
-		repairAllItems(ItemCapabilityHelper.getPlayerInventory(player), player, CAN_REPAIR_PLAYER_ITEM);
-		repairAllItems(IntegrationHelper.getCurioItemHandler(player), player, CAN_REPAIR_PLAYER_ITEM);
+		repairPlayerInventory(player.getInventory(), player);
+		IItemHandler curios = IntegrationHelper.getCurioItemHandler(player);
+		if (curios != null) {
+			repairAllItems(curios, player, CAN_REPAIR_PLAYER_ITEM);
+		}
+	}
+
+	private static boolean repairPlayerInventory(Inventory inventory, Player player) {
+		boolean hasAction = false;
+		for (int i = 0, slots = inventory.getContainerSize(); i < slots; i++) {
+			ItemStack stack = inventory.getItem(i);
+			if (CAN_REPAIR_PLAYER_ITEM.test(stack, player)) {
+				stack.setDamageValue(stack.getDamageValue() - 1);
+				hasAction = true;
+			}
+		}
+		return hasAction;
 	}
 
 	private static <DATA> boolean repairAllItems(@Nullable IItemHandler inv, DATA data, BiPredicate<ItemStack, DATA> canRepairStack) {
@@ -123,12 +138,17 @@ public class RepairTalisman extends ItemPE implements IAlchBagItem, IAlchChestIt
 		boolean hasAction = false;
 		for (int i = 0, slots = inv.getSlots(); i < slots; i++) {
 			ItemStack invStack = inv.getStackInSlot(i);
-			if (canRepairStack.test(invStack, data)) {
-				invStack.setDamageValue(invStack.getDamageValue() - 1);
-				if (!hasAction) {
-					hasAction = true;
-				}
+			if (!canRepairStack.test(invStack, data)) {
+				continue;
 			}
+			ItemStack repaired = invStack.copy();
+			repaired.setDamageValue(repaired.getDamageValue() - 1);
+			if (inv instanceof IItemHandlerModifiable modifiable) {
+				modifiable.setStackInSlot(i, repaired);
+			} else {
+				invStack.setDamageValue(invStack.getDamageValue() - 1);
+			}
+			hasAction = true;
 		}
 		return hasAction;
 	}

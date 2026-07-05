@@ -42,6 +42,7 @@ $RECYCLE.BIN/
 net/
 compile-*.txt
 build-latest.txt
+_retexture_extract/
 
 # Cursor / IDE agent (local only)
 .cursor/

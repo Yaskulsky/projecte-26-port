@@ -16,6 +16,8 @@ Transmutation tables, collectors, condensers, rings, EMC — full ProjectE / EE2
 
 Base code: [ProjectE](https://github.com/sinkillerj/ProjectE) (MIT, Sin Tachikawa and contributors).
 
+**Textures:** Official ProjectE textures from [sinkillerj/ProjectE](https://github.com/sinkillerj/ProjectE) (MIT). Philosopher's Stone texture from Retro Exchange.
+
 ---
 
 # Bug reports

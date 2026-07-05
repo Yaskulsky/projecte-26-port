@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "projecte:dark_matter"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "projecte:dark_matter"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "projecte:dark_matter"
+      }
+    ]
+  }
+}

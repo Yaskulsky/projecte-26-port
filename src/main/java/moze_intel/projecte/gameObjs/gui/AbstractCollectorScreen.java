@@ -27,6 +27,11 @@ public abstract class AbstractCollectorScreen<T extends CollectorMK1Container> e
 		return 0;
 	}
 
+	@Override
+	protected void extractLabels(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
+		peExtractLabels(graphics, mouseX, mouseY);
+	}
+
 	protected void peExtractLabels(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
 		graphics.text(font, Long.toString(menu.emc.get()), 60 + getBonusXShift(), 32, PEGuiGraphics.LABEL_COLOR, false);
 		long kleinCharge = menu.kleinEmc.get();

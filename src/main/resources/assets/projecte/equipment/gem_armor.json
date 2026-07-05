@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "projecte:gem_armor"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "projecte:gem_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "projecte:gem_armor"
+      }
+    ]
+  }
+}

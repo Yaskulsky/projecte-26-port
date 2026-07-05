@@ -17,6 +17,12 @@ public class AlchBagScreen extends PEContainerScreen<AlchBagContainer> {
 	}
 
 	@Override
+	protected void extractLabels(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
+		graphics.text(font, title, (imageWidth - font.width(title)) / 2, 4, PEGuiGraphics.LABEL_COLOR, false);
+		graphics.text(font, playerInventoryTitle, 48, 140, PEGuiGraphics.LABEL_COLOR, false);
+	}
+
+	@Override
 	protected void peExtractBackground(@NotNull GuiGraphicsExtractor graphics, float partialTicks, int mouseX, int mouseY) {
 		PEGuiGraphics.blit(graphics, texture, leftPos, topPos, 0, 0, imageWidth, imageHeight);
 	}

@@ -161,7 +161,11 @@ public class GUITransmutation extends PEContainerScreen<TransmutationContainer> 
 
 
 	@Override
+	protected void extractLabels(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
+		peExtractLabels(graphics, mouseX, mouseY);
+	}
 
+	@Override
 	protected void peExtractLabels(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
 
 		graphics.text(font, title, titleLabelX, titleLabelY, 0xFF404040, false);
