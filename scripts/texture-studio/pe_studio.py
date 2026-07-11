@@ -15,6 +15,7 @@ from pe_studio.ai_export import openai_image, write_prompt_pack
 from pe_studio.palette import THEMES
 from pe_studio.pack_generator import generate_pack, write_resource_pack_meta
 from pe_studio.preview import write_preview
+from pe_studio.prompt_gen import generate_prompt_files
 from pe_studio.remap import klein_tier_from_master, remap_image
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -83,6 +84,18 @@ def cmd_generate_pack(args: argparse.Namespace) -> int:
     print(f"resource pack: {rp}")
     if install:
         print(f"installed to mod: {install}")
+    return 0
+
+
+def cmd_prompt_pack(args: argparse.Namespace) -> int:
+    tex = Path(args.input)
+    inventory = sorted(
+        p.relative_to(tex).as_posix()[:-4]
+        for p in tex.rglob("*.png")
+    )
+    out = Path(args.output).resolve()
+    stats = generate_prompt_files(inventory, out)
+    print(f"prompt-pack: {stats['prompts']} prompts, {stats['skipped']} skipped -> {out}")
     return 0
 
 
@@ -222,6 +235,11 @@ def build_parser() -> argparse.ArgumentParser:
     )
     gp.add_argument("--no-install", action="store_true", help="Skip mod install")
     gp.set_defaults(func=cmd_generate_pack)
+
+    pp = sub.add_parser("prompt-pack", help="Per-texture AI prompts (ComfyUI/PixelLab)")
+    pp.add_argument("-i", "--input", default=str(_repo_tex()))
+    pp.add_argument("-o", "--output", default="build/ai-prompts")
+    pp.set_defaults(func=cmd_prompt_pack)
 
     pr = sub.add_parser("preview", help="HTML contact sheet")
     pr.add_argument("-i", "--input", default=str(_repo_tex()))

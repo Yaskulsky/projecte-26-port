@@ -43,6 +43,11 @@ public class GUITransmutation extends PEContainerScreen<TransmutationContainer> 
 
 
 	private static final BigInteger MAX_EXACT_TRANSMUTATION_DISPLAY = BigInteger.valueOf(1_000_000_000_000L);
+	private static final int SEARCH_BOX_X = 79;
+	private static final int SEARCH_BOX_Y = 6;
+	private static final int SEARCH_BOX_WIDTH = 70;
+	private static final int SEARCH_BOX_HEIGHT = 10;
+	private static final Component SEARCH_HINT = Component.literal("Search...");
 
 	private static final Identifier texture = PECore.rl("textures/gui/transmute.png");
 
@@ -65,6 +70,8 @@ public class GUITransmutation extends PEContainerScreen<TransmutationContainer> 
 		this.titleLabelX = 6;
 
 		this.titleLabelY = 8;
+		// Hide the default player inventory label ("Inventory")
+		this.inventoryLabelY = this.imageHeight + 100;
 
 	}
 
@@ -78,8 +85,10 @@ public class GUITransmutation extends PEContainerScreen<TransmutationContainer> 
 
 
 
-		this.textBoxFilter = addWidget(new EditBox(this.font, leftPos + 83, topPos + 8, 55, 10, Component.empty()));
-
+		this.textBoxFilter = addRenderableWidget(new EditBox(this.font, leftPos + SEARCH_BOX_X, topPos + SEARCH_BOX_Y, SEARCH_BOX_WIDTH, SEARCH_BOX_HEIGHT, Component.empty()));
+		this.textBoxFilter.setMaxLength(64);
+		this.textBoxFilter.setBordered(true);
+		this.textBoxFilter.setHint(SEARCH_HINT);
 		this.textBoxFilter.setResponder(inv::updateFilter);
 
 
@@ -161,40 +170,43 @@ public class GUITransmutation extends PEContainerScreen<TransmutationContainer> 
 
 
 	@Override
+
 	protected void extractLabels(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
+
 		peExtractLabels(graphics, mouseX, mouseY);
+
 	}
 
+
+
 	@Override
+
 	protected void peExtractLabels(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
 
-		graphics.text(font, title, titleLabelX, titleLabelY, 0xFF404040, false);
+		graphics.text(font, title, titleLabelX, titleLabelY, PEGuiGraphics.LABEL_COLOR, false);
 
-		graphics.text(font, PELang.EMC_TOOLTIP.translate(""), 6, this.imageHeight - 104, 0xFF404040, false);
+		graphics.text(font, PELang.EMC_TOOLTIP.translate(""), 6, this.imageHeight - 104, PEGuiGraphics.LABEL_COLOR, false);
 
 		Component emc = TransmutationEMCFormatter.formatEMC(inv.getAvailableEmc());
 
-		graphics.text(font, emc, 6, this.imageHeight - 94, 0xFF404040, false);
-
-
-
+		graphics.text(font, emc, 6, this.imageHeight - 94, PEGuiGraphics.LABEL_COLOR, false);
 		if (inv.learnFlag > 0) {
 
-			graphics.text(font, PELang.TRANSMUTATION_LEARNED_1.translate(), 98, 30, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_LEARNED_1.translate(), 98, 30, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_LEARNED_2.translate(), 99, 38, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_LEARNED_2.translate(), 99, 38, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_LEARNED_3.translate(), 100, 46, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_LEARNED_3.translate(), 100, 46, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_LEARNED_4.translate(), 101, 54, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_LEARNED_4.translate(), 101, 54, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_LEARNED_5.translate(), 102, 62, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_LEARNED_5.translate(), 102, 62, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_LEARNED_6.translate(), 103, 70, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_LEARNED_6.translate(), 103, 70, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_LEARNED_7.translate(), 104, 78, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_LEARNED_7.translate(), 104, 78, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_LEARNED_8.translate(), 107, 86, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_LEARNED_8.translate(), 107, 86, PEGuiGraphics.LABEL_COLOR, false);
 
 
 
@@ -206,23 +218,23 @@ public class GUITransmutation extends PEContainerScreen<TransmutationContainer> 
 
 		if (inv.unlearnFlag > 0) {
 
-			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_1.translate(), 97, 22, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_1.translate(), 97, 22, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_2.translate(), 98, 30, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_2.translate(), 98, 30, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_3.translate(), 99, 38, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_3.translate(), 99, 38, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_4.translate(), 100, 46, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_4.translate(), 100, 46, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_5.translate(), 101, 54, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_5.translate(), 101, 54, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_6.translate(), 102, 62, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_6.translate(), 102, 62, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_7.translate(), 103, 70, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_7.translate(), 103, 70, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_8.translate(), 104, 78, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_8.translate(), 104, 78, PEGuiGraphics.LABEL_COLOR, false);
 
-			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_9.translate(), 107, 86, 0xFF404040, false);
+			graphics.text(font, PELang.TRANSMUTATION_UNLEARNED_9.translate(), 107, 86, PEGuiGraphics.LABEL_COLOR, false);
 
 
 
@@ -266,15 +278,21 @@ public class GUITransmutation extends PEContainerScreen<TransmutationContainer> 
 
 		double y = event.y();
 
-		if (textBoxFilter.isMouseOver(x, y)) {
+		if (textBoxFilter.isMouseOver(x, y) && event.button() == GLFW.GLFW_MOUSE_BUTTON_RIGHT) {
 
-			if (event.button() == GLFW.GLFW_MOUSE_BUTTON_RIGHT) {
+			this.textBoxFilter.setValue("");
 
-				this.textBoxFilter.setValue("");
+			return true;
 
-			}
+		}
 
-		} else if (textBoxFilter.isFocused()) {
+		if (super.mouseClicked(event, doubleClick)) {
+
+			return true;
+
+		}
+
+		if (textBoxFilter.isFocused()) {
 
 			if (hoveredSlot == null || (!hoveredSlot.hasItem() && menu.getCarried().isEmpty())) {
 
@@ -284,7 +302,7 @@ public class GUITransmutation extends PEContainerScreen<TransmutationContainer> 
 
 		}
 
-		return super.mouseClicked(event, doubleClick);
+		return false;
 
 	}
 
@@ -308,39 +326,39 @@ public class GUITransmutation extends PEContainerScreen<TransmutationContainer> 
 
 	protected void extractTooltip(@NotNull GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
 
+		int searchLeft = leftPos + SEARCH_BOX_X;
+		int searchRight = searchLeft + SEARCH_BOX_WIDTH;
+		int searchTop = topPos + SEARCH_BOX_Y;
+		int searchBottom = searchTop + SEARCH_BOX_HEIGHT;
+
+		if (mouseX > searchLeft && mouseX < searchRight && mouseY > searchTop && mouseY < searchBottom) {
+			graphics.setTooltipForNextFrame(font, SEARCH_HINT, mouseX, mouseY);
+			return;
+		}
+
 		BigInteger emcAmount = inv.getAvailableEmc();
 
+		if (emcAmount.compareTo(MAX_EXACT_TRANSMUTATION_DISPLAY) >= 0) {
 
+			int emcLeft = leftPos;
 
-		if (emcAmount.compareTo(MAX_EXACT_TRANSMUTATION_DISPLAY) < 0) {
+			int emcRight = emcLeft + 82;
 
-			super.extractTooltip(graphics, mouseX, mouseY);
+			int emcTop = 95 + topPos;
 
-			return;
+			int emcBottom = emcTop + 15;
 
-		}
+			if (mouseX > emcLeft && mouseX < emcRight && mouseY > emcTop && mouseY < emcBottom) {
 
+				graphics.setTooltipForNextFrame(font, PELang.EMC_TOOLTIP.translate(EMCHelper.formatEmc(emcAmount)), mouseX, mouseY);
 
+				return;
 
-		int emcLeft = leftPos;
-
-		int emcRight = emcLeft + 82;
-
-		int emcTop = 95 + topPos;
-
-		int emcBottom = emcTop + 15;
-
-
-
-		if (mouseX > emcLeft && mouseX < emcRight && mouseY > emcTop && mouseY < emcBottom) {
-
-			graphics.setTooltipForNextFrame(font, PELang.EMC_TOOLTIP.translate(EMCHelper.formatEmc(emcAmount)), mouseX, mouseY);
-
-		} else {
-
-			super.extractTooltip(graphics, mouseX, mouseY);
+			}
 
 		}
+
+		super.extractTooltip(graphics, mouseX, mouseY);
 
 	}
 

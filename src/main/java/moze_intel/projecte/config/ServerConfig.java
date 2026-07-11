@@ -173,7 +173,6 @@ public final class ServerConfig extends BasePEConfig {
 
 		public final CachedBooleanValue pickaxeAoeVeinMining;
 		public final CachedBooleanValue harvBandIndirect;
-		public final CachedBooleanValue harvBandPickHarvest;
 		public final CachedBooleanValue disableAllRadiusMining;
 		public final CachedBooleanValue enableTimeWatch;
 		public final CachedBooleanValue opEvertide;
@@ -184,8 +183,6 @@ public final class ServerConfig extends BasePEConfig {
 					.define("pickaxeAoeVeinMining", false));
 			harvBandIndirect = CachedBooleanValue.wrap(config, PEConfigTranslations.SERVER_ITEMS_HARVEST_BAND_INDIRECT.applyToBuilder(builder)
 					.define("harvBandIndirect", false));
-			harvBandPickHarvest = CachedBooleanValue.wrap(config, PEConfigTranslations.SERVER_ITEMS_HARVEST_BAND_PICK_HARVEST.applyToBuilder(builder)
-					.define("harvBandPickHarvest", false));
 			disableAllRadiusMining = CachedBooleanValue.wrap(config, PEConfigTranslations.SERVER_ITEMS_DISABLE_ALL_RADIUS_MINING.applyToBuilder(builder)
 					.define("disableAllRadiusMining", false));
 			enableTimeWatch = CachedBooleanValue.wrap(config, PEConfigTranslations.SERVER_ITEMS_TIME_WATCH.applyToBuilder(builder)

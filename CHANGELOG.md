@@ -2,6 +2,20 @@
 
 All notable changes to [Yaskulsky/projecte-26-port](https://github.com/Yaskulsky/projecte-26-port) are documented here.
 
+## [1.2.5] — 2026-07-11
+
+### Fixed
+- **Transmutation Table GUI rendering** — restored `extractLabels` override (skip vanilla labels that overlap slots / use invisible alpha on MC 26.1). Synced GUI code and textures from dev tree; search bar still uses `addRenderableWidget`.
+
+---
+
+## [1.2.4] — 2026-07-11
+
+### Fixed
+- **Transmutation Table search bar** — search field now uses `addRenderableWidget` so it actually draws on MC 26.1 (was invisible with `addWidget`).
+
+---
+
 ## [1.2.3] — 2026-07-11
 
 ### Added

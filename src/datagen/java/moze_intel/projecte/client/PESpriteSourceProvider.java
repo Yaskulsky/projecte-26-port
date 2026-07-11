@@ -23,8 +23,7 @@ public class PESpriteSourceProvider extends SpriteSourceProvider {
 
 	@Override
 	protected void gather() {
-		//Note: We always stitch this even when curios isn't loaded, but I don't think there is much we can do about that,
-		// and it is only a small texture, so it won't matter too much
+		// Curios 15 resolves slot icons from the GUI atlas (not blocks).
 		addFiles(atlas(AtlasIds.GUI), PECore.rl("slot/empty_klein_star"));
 	}
 

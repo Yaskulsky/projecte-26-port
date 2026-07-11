@@ -53,3 +53,4 @@ WRZUC-NA-GITHUB.txt
 # Python
 __pycache__/
 *.pyc
+scripts/texture-studio/pe_studio/prompt_gen.py

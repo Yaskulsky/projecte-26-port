@@ -2,6 +2,7 @@ package moze_intel.projecte.rendering;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
+import moze_intel.projecte.PECore;
 import moze_intel.projecte.gameObjs.block_entities.DMPedestalBlockEntity;
 import net.minecraft.SharedConstants;
 import net.minecraft.client.Minecraft;
@@ -59,8 +60,13 @@ public class PedestalRenderer implements BlockEntityRenderer<DMPedestalBlockEnti
 
 		ItemStackRenderState itemRenderState = new ItemStackRenderState();
 		var level = Minecraft.getInstance().level;
-		itemModelResolver.updateForTopItem(itemRenderState, stack, ItemDisplayContext.GROUND, level, null, (int) state.blockPos.asLong());
-		itemRenderState.submit(poseStack, submitNodeCollector, state.lightCoords, OverlayTexture.NO_OVERLAY, 0);
+		try {
+			itemModelResolver.updateForTopItem(itemRenderState, stack, ItemDisplayContext.GROUND, level, null, (int) state.blockPos.asLong());
+			itemRenderState.submit(poseStack, submitNodeCollector, state.lightCoords, OverlayTexture.NO_OVERLAY, 0);
+		} catch (RuntimeException e) {
+			// ModernFix throws when item models fail to load (e.g. corrupted mod JAR during hot deploy)
+			PECore.LOGGER.warn("Failed to render pedestal item {}: {}", stack, e.toString());
+		}
 		poseStack.popPose();
 	}
 }

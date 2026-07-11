@@ -122,9 +122,8 @@ def generate_pack(src_root: Path, out_root: Path, install_mod: Path | None = Non
             stats["keep"] += 1
 
     # Curios slot icon from klein tier 1.
-    # Curios slot JSON expects `projecte:curios/empty_klein_star`, so keep the
-    # generated art pack aligned with the runtime resource location.
-    slot = out_root / "curios" / "empty_klein_star.png"
+    # Curios expects slot sprites in the GUI atlas under `projecte:slot/...`.
+    slot = out_root / "slot" / "empty_klein_star.png"
     k1 = out_root / "item" / "stars" / "klein_star_1.png"
     if k1.exists():
         slot.parent.mkdir(parents=True, exist_ok=True)

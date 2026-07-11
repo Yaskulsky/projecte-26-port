@@ -1,7 +1,6 @@
 package moze_intel.projecte.gameObjs.gui;
 
 import net.minecraft.client.renderer.RenderPipelines;
-import moze_intel.projecte.gameObjs.gui.PEGuiGraphics;
 import moze_intel.projecte.PECore;
 import moze_intel.projecte.gameObjs.block_entities.DMFurnaceBlockEntity;
 import moze_intel.projecte.gameObjs.container.DMFurnaceContainer;

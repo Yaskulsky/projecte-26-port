@@ -253,7 +253,7 @@ public class PEModelProvider extends ModelProvider {
 				.put(TextureSlot.PARTICLE, top);
 		Identifier modelLoc = model.create(PEBlocks.TRANSMUTATION_TABLE.getBlock(), textures, blockModels.modelOutput);
 		blockModels.blockStateOutput.accept(MultiVariantGenerator.dispatch(PEBlocks.TRANSMUTATION_TABLE.getBlock(), BlockModelGenerators.plainVariant(modelLoc))
-				.with(BlockModelGenerators.ROTATION_FACING));
+				.with(BlockModelGenerators.ROTATIONS_COLUMN_WITH_FACING));
 	}
 
 	private void registerExplosives(BlockModelGenerators blockModels) {
