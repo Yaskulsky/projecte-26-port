@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "equivox:full_klein_stars"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "equivox:rm_chestplate",
+    "equivox:volcanite_amulet",
+    "equivox:body_stone",
+    "equivox:klein_star_omega"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:gem_chestplate"
+  }
+}

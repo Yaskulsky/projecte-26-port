@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "equivox:aeternalis_fuel_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "equivox:aeternalis_fuel"
+  }
+}

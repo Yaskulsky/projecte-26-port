@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "equivox:alchemical_coal",
+    "equivox:alchemical_coal",
+    "equivox:alchemical_coal",
+    "equivox:alchemical_coal",
+    "equivox:alchemical_coal",
+    "equivox:alchemical_coal",
+    "equivox:alchemical_coal",
+    "equivox:alchemical_coal",
+    "equivox:alchemical_coal"
+  ],
+  "result": {
+    "id": "equivox:alchemical_coal_block"
+  }
+}

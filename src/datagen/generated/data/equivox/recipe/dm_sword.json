@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "#c:gems/diamond",
+    "M": "equivox:dark_matter"
+  },
+  "pattern": [
+    "M",
+    "M",
+    "D"
+  ],
+  "result": {
+    "id": "equivox:dm_sword"
+  }
+}

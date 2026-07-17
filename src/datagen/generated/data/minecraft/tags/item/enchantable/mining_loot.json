@@ -1,17 +1,17 @@
 {
   "remove": [
-    "projecte:dm_axe",
-    "projecte:rm_axe",
-    "projecte:dm_pick",
-    "projecte:rm_pick",
-    "projecte:dm_shovel",
-    "projecte:rm_shovel",
-    "projecte:dm_hoe",
-    "projecte:rm_hoe",
-    "projecte:dm_hammer",
-    "projecte:rm_hammer",
-    "projecte:rm_katar",
-    "projecte:rm_morning_star"
+    "equivox:dm_axe",
+    "equivox:rm_axe",
+    "equivox:dm_pick",
+    "equivox:rm_pick",
+    "equivox:dm_shovel",
+    "equivox:rm_shovel",
+    "equivox:dm_hoe",
+    "equivox:rm_hoe",
+    "equivox:dm_hammer",
+    "equivox:rm_hammer",
+    "equivox:rm_katar",
+    "equivox:rm_morning_star"
   ],
   "values": []
 }

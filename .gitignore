@@ -54,3 +54,5 @@ WRZUC-NA-GITHUB.txt
 __pycache__/
 *.pyc
 scripts/texture-studio/pe_studio/prompt_gen.py
+scripts/deploy-atm11.ps1
+scripts/deploy-atm11.ps1

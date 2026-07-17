@@ -38,7 +38,7 @@ body {{ background:#1a1a1a; color:#ddd; font-family:system-ui,sans-serif; paddin
 .cell img {{ image-rendering:pixelated; max-width:128px; }}
 code {{ font-size:10px; word-break:break-all; display:block; margin-top:6px; }}
 </style></head><body>
-<h1>ProjectE textures ({len(pngs)} files)</h1>
+<h1>Equivox textures ({len(pngs)} files)</h1>
 <div class="grid">{''.join(rows)}</div>
 </body></html>"""
     out_html.parent.mkdir(parents=True, exist_ok=True)

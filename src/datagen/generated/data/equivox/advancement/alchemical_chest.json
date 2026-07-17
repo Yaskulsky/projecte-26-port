@@ -1,0 +1,32 @@
+{
+  "parent": "equivox:root",
+  "criteria": {
+    "alch_chest": {
+      "conditions": {
+        "items": [
+          {
+            "items": "equivox:alchemical_chest"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.equivox.alch_chest.description"
+    },
+    "icon": {
+      "id": "equivox:alchemical_chest"
+    },
+    "title": {
+      "translate": "advancements.equivox.alch_chest"
+    }
+  },
+  "requirements": [
+    [
+      "alch_chest"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

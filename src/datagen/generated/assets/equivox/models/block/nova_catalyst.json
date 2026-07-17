@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "equivox:block/explosives/bottom",
+    "side": "equivox:block/explosives/nova_side",
+    "top": "equivox:block/explosives/top"
+  }
+}

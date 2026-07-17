@@ -1,4 +1,4 @@
-# Discord server setup — Yaskulsky / ProjectE 26.1 port
+# Discord server setup — Yaskulsky / Equivox 26.1 port
 
 Copy-paste into your server. Replace `[CURSEFORGE_LINK]` when you have it.
 
@@ -8,8 +8,8 @@ Copy-paste into your server. Replace `[CURSEFORGE_LINK]` when you have it.
 
 | Field | Value |
 |-------|-------|
-| **Server name** | `ProjectE 26.1 Port` or `Yaskulsky Mods` |
-| **Description** | Unofficial ProjectE port for MC 26.1.2 / NeoForge. Not affiliated with official ProjectE. |
+| **Server name** | `Equivox 26.1 Port` or `Yaskulsky Mods` |
+| **Description** | Unofficial Equivox port for MC 26.1.2 / NeoForge. Not affiliated with official Equivox. |
 
 **Invite:** Server Settings → Invites → never expire → paste link in README + CurseForge.
 
@@ -39,9 +39,9 @@ Optional later: `#dev-updates`, `#pack-testing`, voice lounge.
 ## #rules (pin this)
 
 ```
-📌 Server rules — ProjectE 26.1 port (unofficial)
+📌 Server rules — Equivox 26.1 port (unofficial)
 
-1. This is an UNOFFICIAL community server for Yaskulsky's ProjectE port (MC 26.1.2 / NeoForge). We are NOT the official ProjectE team.
+1. This is an UNOFFICIAL community server for Yaskulsky's Equivox port (MC 26.1.2 / NeoForge). We are NOT the official Equivox team.
 
 2. Be respectful. No harassment, spam, or NSFW.
 
@@ -80,7 +80,7 @@ Base mod (MIT):      https://github.com/sinkillerj/ProjectE
 ## #announcements — template for new release
 
 ```
-📦 **ProjectE 26.1 port — v1.2.0**
+📦 **Equivox 26.1 port — v1.2.0**
 
 Minecraft **26.1.2** · NeoForge **26.1.2+**
 
@@ -119,7 +119,7 @@ Or use a bot later. Manual welcome in #general pin:
 ```
 Welcome! 👋
 
-Unofficial **ProjectE** port for **Minecraft 26.1.2** / **NeoForge**.
+Unofficial **Equivox** port for **Minecraft 26.1.2** / **NeoForge**.
 Maintained by **Yaskulsky**.
 
 Read #rules and #links first.
@@ -145,7 +145,7 @@ If you enable **Community**:
 | `@Mod` | Red | Trusted helpers |
 | `@Member` | Default | Everyone |
 
-Do **not** use names like "Official ProjectE" or "Dev Team".
+Do **not** use names like "Official Equivox" or "Dev Team".
 
 ---
 

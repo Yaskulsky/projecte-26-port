@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "equivox:philosophers_stone",
+    "equivox:alchemical_coal",
+    "equivox:alchemical_coal",
+    "equivox:alchemical_coal",
+    "equivox:alchemical_coal"
+  ],
+  "result": {
+    "id": "equivox:mobius_fuel"
+  }
+}

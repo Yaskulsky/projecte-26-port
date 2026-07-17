@@ -1,10 +1,10 @@
 {
   "values": [
-    "projecte:dark_matter_block",
-    "projecte:dm_furnace",
-    "projecte:dm_pedestal",
-    "projecte:red_matter_block",
-    "projecte:rm_furnace",
-    "projecte:condenser_mk2"
+    "equivox:dark_matter_block",
+    "equivox:dm_furnace",
+    "equivox:dm_pedestal",
+    "equivox:red_matter_block",
+    "equivox:rm_furnace",
+    "equivox:condenser_mk2"
   ]
 }

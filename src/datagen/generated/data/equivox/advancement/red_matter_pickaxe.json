@@ -1,0 +1,32 @@
+{
+  "parent": "equivox:dark_matter_pickaxe",
+  "criteria": {
+    "rm_pick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "equivox:rm_pick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.equivox.red_matter_pickaxe.description"
+    },
+    "icon": {
+      "id": "equivox:rm_pick"
+    },
+    "title": {
+      "translate": "advancements.equivox.red_matter_pickaxe"
+    }
+  },
+  "requirements": [
+    [
+      "rm_pick"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

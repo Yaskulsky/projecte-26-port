@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "equivox:red_matter",
+  "key": {
+    "A": "equivox:aeternalis_fuel",
+    "D": "equivox:dark_matter"
+  },
+  "pattern": [
+    "AAA",
+    "DDD",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:red_matter"
+  }
+}

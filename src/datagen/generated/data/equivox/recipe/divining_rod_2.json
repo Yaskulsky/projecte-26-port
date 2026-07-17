@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "equivox:medium_covalence_dust",
+    "S": "equivox:divining_rod_1"
+  },
+  "pattern": [
+    "DDD",
+    "DSD",
+    "DDD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:divining_rod_2"
+  }
+}

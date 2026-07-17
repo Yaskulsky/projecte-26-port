@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "equivox:tome_enabled"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "equivox:full_klein_stars"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "equivox:tome",
+  "key": {
+    "B": "minecraft:book",
+    "H": "equivox:high_covalence_dust",
+    "K": "equivox:klein_star_omega",
+    "L": "equivox:low_covalence_dust",
+    "M": "equivox:medium_covalence_dust"
+  },
+  "pattern": [
+    "HML",
+    "KBK",
+    "LMH"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:tome"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "equivox:black_hole_band",
+    "equivox:gem_of_eternal_density",
+    "equivox:red_matter",
+    "equivox:red_matter"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:void_ring"
+  }
+}

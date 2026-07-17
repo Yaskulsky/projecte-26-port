@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": "minecraft:bow",
+    "F": "#c:feathers",
+    "I": "equivox:iron_band",
+    "M": "equivox:dark_matter"
+  },
+  "pattern": [
+    "BFB",
+    "MIM",
+    "BFB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:archangel_smite"
+  }
+}

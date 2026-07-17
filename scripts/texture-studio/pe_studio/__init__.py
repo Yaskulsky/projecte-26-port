@@ -1,1 +1,1 @@
-"""ProjectE texture studio — remap, preview, AI prompts."""
+"""Equivox texture studio — remap, preview, AI prompts."""

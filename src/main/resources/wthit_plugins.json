@@ -1,6 +1,6 @@
 {
-  "projecte:plugin": {
-    "initializer": "moze_intel.projecte.integration.wthit.PEWTHITPlugin",
+  "equivox:plugin": {
+    "initializer": "com.yaskulsky.equivox.integration.wthit.PEWTHITPlugin",
     "side": "*",
     "required": []
   }

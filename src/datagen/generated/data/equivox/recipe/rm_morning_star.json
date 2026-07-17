@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "1": "equivox:rm_hammer",
+    "2": "equivox:rm_pick",
+    "3": "equivox:rm_shovel",
+    "R": "equivox:red_matter"
+  },
+  "pattern": [
+    "123",
+    "RRR",
+    "RRR"
+  ],
+  "result": {
+    "id": "equivox:rm_morning_star"
+  }
+}

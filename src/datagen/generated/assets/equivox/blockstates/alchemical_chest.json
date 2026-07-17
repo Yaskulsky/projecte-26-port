@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "equivox:block/alchemical_chest",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "equivox:block/alchemical_chest"
+    },
+    "facing=south": {
+      "model": "equivox:block/alchemical_chest",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "equivox:block/alchemical_chest",
+      "y": 270
+    }
+  }
+}

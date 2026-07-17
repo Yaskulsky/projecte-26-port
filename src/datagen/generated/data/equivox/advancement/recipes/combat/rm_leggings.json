@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_matter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "equivox:red_matter"
+          },
+          {
+            "items": "equivox:dm_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "equivox:rm_leggings"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_matter"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "equivox:rm_leggings"
+    ]
+  }
+}

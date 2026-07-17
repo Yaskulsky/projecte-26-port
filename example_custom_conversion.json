@@ -1,5 +1,5 @@
 /*
-  Add a file like this to data/<domain>/pe_custom_conversions/foo.json to have ProjectE load it
+  Add a file like this to data/<domain>/pe_custom_conversions/foo.json to have Equivox load it
   A grammar is available at: https://gist.github.com/pupnewfster/7b5c411635e16227c1dea9af5e20e4c3
 */
 

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "equivox:dark_matter",
+    "L": "minecraft:lava_bucket"
+  },
+  "pattern": [
+    "LLL",
+    "DDD",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:volcanite_amulet"
+  }
+}

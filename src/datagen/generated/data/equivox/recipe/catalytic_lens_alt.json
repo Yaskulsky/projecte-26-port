@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "equivox:catalytic_lens",
+  "key": {
+    "D": "equivox:destruction_catalyst",
+    "H": "equivox:hyperkinetic_lens",
+    "M": "equivox:dark_matter"
+  },
+  "pattern": [
+    "MMM",
+    "HMD",
+    "MMM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:catalytic_lens"
+  }
+}

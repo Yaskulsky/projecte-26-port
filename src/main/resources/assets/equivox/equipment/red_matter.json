@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "equivox:red_matter"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "equivox:red_matter"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "equivox:red_matter"
+      }
+    ]
+  }
+}

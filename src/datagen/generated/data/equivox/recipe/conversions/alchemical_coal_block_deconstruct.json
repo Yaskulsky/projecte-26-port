@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "equivox:alchemical_coal_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "equivox:alchemical_coal"
+  }
+}

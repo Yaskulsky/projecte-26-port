@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "equivox:block/mobius_fuel_block"
+    }
+  }
+}

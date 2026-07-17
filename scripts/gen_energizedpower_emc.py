@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 
-# Vanilla-ish reference EMC (ProjectE defaults)
+# Vanilla-ish reference EMC (Equivox defaults)
 V = {
     "iron": 256,
     "copper": 128,
@@ -546,7 +546,7 @@ if missing:
 before = []
 for item in sorted(E.keys()):
     before.append({
-        "type": "projecte:item",
+        "type": "equivox:item",
         "id": f"energizedpower:{item}",
         "emc_value": E[item],
     })
@@ -556,8 +556,8 @@ conversion = [
     *[
         {
             "count": 9,
-            "ingredients": [{"type": "projecte:item", "tag": f"c:storage_blocks/{metal}"}],
-            "output": {"type": "projecte:item", "tag": f"c:ingots/{metal}"},
+            "ingredients": [{"type": "equivox:item", "tag": f"c:storage_blocks/{metal}"}],
+            "output": {"type": "equivox:item", "tag": f"c:ingots/{metal}"},
             "propagateTags": True,
         }
         for metal in [
@@ -568,8 +568,8 @@ conversion = [
     # Ingot -> plate
     *[
         {
-            "ingredients": [{"type": "projecte:item", "tag": f"c:ingots/{metal}"}],
-            "output": {"type": "projecte:item", "tag": f"c:plates/{metal}"},
+            "ingredients": [{"type": "equivox:item", "tag": f"c:ingots/{metal}"}],
+            "output": {"type": "equivox:item", "tag": f"c:plates/{metal}"},
             "propagateTags": True,
         }
         for metal in [
@@ -581,22 +581,22 @@ conversion = [
     # Ingot -> nugget
     {
         "count": 9,
-        "ingredients": [{"type": "projecte:item", "tag": "c:ingots/tin"}],
-        "output": {"type": "projecte:item", "tag": "c:nuggets/tin"},
+        "ingredients": [{"type": "equivox:item", "tag": "c:ingots/tin"}],
+        "output": {"type": "equivox:item", "tag": "c:nuggets/tin"},
         "propagateTags": True,
     },
     {
         "count": 9,
-        "ingredients": [{"type": "projecte:item", "tag": "c:ingots/steel"}],
-        "output": {"type": "projecte:item", "tag": "c:nuggets/steel"},
+        "ingredients": [{"type": "equivox:item", "tag": "c:ingots/steel"}],
+        "output": {"type": "equivox:item", "tag": "c:nuggets/steel"},
         "propagateTags": True,
     },
     # Ingot -> dust
     *[
         {
             "count": 2,
-            "ingredients": [{"type": "projecte:item", "tag": f"c:ingots/{metal}"}],
-            "output": {"type": "projecte:item", "tag": f"c:dusts/{metal}"},
+            "ingredients": [{"type": "equivox:item", "tag": f"c:ingots/{metal}"}],
+            "output": {"type": "equivox:item", "tag": f"c:dusts/{metal}"},
             "propagateTags": True,
         }
         for metal in ["copper", "iron", "gold", "tin"]
@@ -605,8 +605,8 @@ conversion = [
     *[
         {
             "count": 3,
-            "ingredients": [{"type": "projecte:item", "tag": f"c:plates/{metal}"}],
-            "output": {"type": "projecte:item", "tag": f"c:wires/{metal}"},
+            "ingredients": [{"type": "equivox:item", "tag": f"c:plates/{metal}"}],
+            "output": {"type": "equivox:item", "tag": f"c:wires/{metal}"},
             "propagateTags": True,
         }
         for metal in ["copper", "tin", "gold", "energized_copper", "energized_gold"]
@@ -614,19 +614,19 @@ conversion = [
     # Silicon block
     {
         "count": 9,
-        "ingredients": [{"type": "projecte:item", "id": "energizedpower:silicon_block"}],
-        "output": {"type": "projecte:item", "id": "energizedpower:silicon"},
+        "ingredients": [{"type": "equivox:item", "id": "energizedpower:silicon_block"}],
+        "output": {"type": "equivox:item", "id": "energizedpower:silicon"},
     },
     {
-        "ingredients": [{"type": "projecte:item", "id": "energizedpower:sawdust_block"}],
-        "output": {"type": "projecte:item", "id": "energizedpower:sawdust"},
+        "ingredients": [{"type": "equivox:item", "id": "energizedpower:sawdust_block"}],
+        "output": {"type": "equivox:item", "id": "energizedpower:sawdust"},
         "count": 9,
     },
 ]
 
 doc = {
     "comment": (
-        "Energized Power EMC values for ProjectE. Anchor values match ATM11 custom_emc.json; "
+        "Energized Power EMC values for Equivox. Anchor values match ATM11 custom_emc.json; "
         "related items scaled by recipe tiers (plates ~1.5x ingot, nuggets 1/9, dust 1/2, "
         "wires 1/3 plate, cables by tier, batteries/solar/upgrades chained, machines = parts + 25%)."
     ),
@@ -636,7 +636,7 @@ doc = {
     },
 }
 
-out = Path("src/datagen/generated/data/projecte/pe_custom_conversions/energizedpower.json")
+out = Path("src/datagen/generated/data/equivox/pe_custom_conversions/energizedpower.json")
 out.parent.mkdir(parents=True, exist_ok=True)
 out.write_text(json.dumps(doc, indent=2) + "\n", encoding="utf-8")
 print(f"Wrote {len(before)} EMC values to {out}")

@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "equivox:block/transmutation_table",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "equivox:block/transmutation_table",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "equivox:block/transmutation_table",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "equivox:block/transmutation_table",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "equivox:block/transmutation_table"
+    },
+    "facing=west": {
+      "model": "equivox:block/transmutation_table",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

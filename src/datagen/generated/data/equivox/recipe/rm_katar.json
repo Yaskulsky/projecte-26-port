@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "1": "equivox:rm_shears",
+    "2": "equivox:rm_axe",
+    "3": "equivox:rm_sword",
+    "4": "equivox:rm_hoe",
+    "R": "equivox:red_matter"
+  },
+  "pattern": [
+    "123",
+    "4RR",
+    "RRR"
+  ],
+  "result": {
+    "id": "equivox:rm_katar"
+  }
+}

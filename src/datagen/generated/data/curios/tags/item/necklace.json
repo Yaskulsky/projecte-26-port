@@ -1,9 +1,9 @@
 {
   "values": [
-    "projecte:body_stone",
-    "projecte:evertide_amulet",
-    "projecte:life_stone",
-    "projecte:soul_stone",
-    "projecte:volcanite_amulet"
+    "equivox:body_stone",
+    "equivox:evertide_amulet",
+    "equivox:life_stone",
+    "equivox:soul_stone",
+    "equivox:volcanite_amulet"
   ]
 }

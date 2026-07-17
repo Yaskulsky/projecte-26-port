@@ -1,0 +1,32 @@
+{
+  "parent": "equivox:red_matter",
+  "criteria": {
+    "rm_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "equivox:red_matter_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.equivox.red_matter_block.description"
+    },
+    "icon": {
+      "id": "equivox:red_matter_block"
+    },
+    "title": {
+      "translate": "advancements.equivox.red_matter_block"
+    }
+  },
+  "requirements": [
+    [
+      "rm_block"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

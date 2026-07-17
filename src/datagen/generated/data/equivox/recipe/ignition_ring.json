@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "equivox:dark_matter",
+    "F": "minecraft:flint_and_steel",
+    "I": "equivox:iron_band",
+    "M": "equivox:mobius_fuel"
+  },
+  "pattern": [
+    "FMF",
+    "DID",
+    "FMF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:ignition_ring"
+  }
+}

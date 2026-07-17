@@ -1,7 +1,7 @@
 {
   "values": [
-    "projecte:alchemical_coal_block",
-    "projecte:mobius_fuel_block",
-    "projecte:aeternalis_fuel_block"
+    "equivox:alchemical_coal_block",
+    "equivox:mobius_fuel_block",
+    "equivox:aeternalis_fuel_block"
   ]
 }

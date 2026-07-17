@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "equivox:body_stone",
+    "equivox:soul_stone"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:life_stone"
+  }
+}

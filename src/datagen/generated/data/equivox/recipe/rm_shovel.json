@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": "equivox:dark_matter",
+    "R": "equivox:red_matter",
+    "S": "equivox:dm_shovel"
+  },
+  "pattern": [
+    "R",
+    "S",
+    "M"
+  ],
+  "result": {
+    "id": "equivox:rm_shovel"
+  }
+}

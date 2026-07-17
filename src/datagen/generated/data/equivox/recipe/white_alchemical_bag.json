@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "equivox:alchemical_chest",
+    "C": "equivox:high_covalence_dust",
+    "W": "minecraft:white_wool"
+  },
+  "pattern": [
+    "CCC",
+    "WAW",
+    "WWW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:white_alchemical_bag"
+  }
+}

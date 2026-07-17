@@ -4,27 +4,27 @@ issueTrackerURL="https://github.com/Yaskulsky/projecte-26-port/issues"
 license="MIT"
 
 [[mods]]
-  modId="projecte"
+  modId="equivox"
   version="${version}"
-  displayName="ProjectEE"
+  displayName="Equivox"
   displayURL="https://github.com/Yaskulsky/projecte-26-port"
   logoFile="logo.png"
-  authors="SinKillerJ, MaPePeR, williewillus, Lilylicious, pupnewfster"
-  credits="EE2 creator - x3n0ph0b3, EE2 GUI Textures - MidnightLightning, Former Texture Artist - Magic Banana. Item/block retextures - Bbublick (ProjectE Retexture). Philosopher's Stone retexture - Retro Exchange. Unofficial 26.1.2 port - Yaskulsky."
-  description='''Unofficial community port of ProjectE for Minecraft 26.1.2 / NeoForge. A complete rewrite of EE2 for modern Minecraft versions.'''
+  authors="Yaskulsky"
+  credits="Based on MIT-licensed code originally by SinKillerJ, MaPePeR, williewillus, Lilylicious, pupnewfster et al. EE2 creator - x3n0ph0b3. Item/block retextures - Bbublick (ProjectE Retexture). Philosopher's Stone - Retro Exchange. Maintainer - Yaskulsky."
+  description='''Equivox for Minecraft 26.1.2 / NeoForge. Forked from the MIT-licensed ProjectE codebase (sinkillerj/ProjectE). Not affiliated with or endorsed by the ProjectE authors.'''
 
-[[dependencies.projecte]]
+[[dependencies.equivox]]
   modId="minecraft"
   type="required"
   versionRange="${mc_version}"
   side="BOTH"
-[[dependencies.projecte]]
+[[dependencies.equivox]]
   modId="neoforge"
   type="required"
   versionRange="${neo_version}"
   side="BOTH"
 
-[[dependencies.projecte]]
+[[dependencies.equivox]]
 modId="mekanism"
 type="incompatible"
 reason="Requires an update to support changes to recipe mappers"

@@ -1,4 +1,4 @@
-"""ProjectE colour themes for luminance-preserving remaps."""
+"""Equivox colour themes for luminance-preserving remaps."""
 
 from __future__ import annotations
 

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "#c:chests/wooden",
+    "D": "#c:gems/diamond",
+    "H": "equivox:high_covalence_dust",
+    "I": "#c:ingots/iron",
+    "L": "equivox:low_covalence_dust",
+    "M": "equivox:medium_covalence_dust",
+    "S": "#c:stones"
+  },
+  "pattern": [
+    "LMH",
+    "SDS",
+    "ICI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:alchemical_chest"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "equivox:full_klein_stars"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "equivox:rm_helmet",
+    "equivox:evertide_amulet",
+    "equivox:soul_stone",
+    "equivox:klein_star_omega"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:gem_helmet"
+  }
+}

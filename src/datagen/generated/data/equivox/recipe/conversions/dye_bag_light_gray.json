@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#equivox:alchemical_bags",
+    "#c:dyes/light_gray"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:light_gray_alchemical_bag"
+  }
+}

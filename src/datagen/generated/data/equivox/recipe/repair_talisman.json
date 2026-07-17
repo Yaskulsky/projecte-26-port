@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "equivox:repair_talisman",
+  "key": {
+    "H": "equivox:high_covalence_dust",
+    "L": "equivox:low_covalence_dust",
+    "M": "equivox:medium_covalence_dust",
+    "P": "minecraft:paper",
+    "S": "#c:strings"
+  },
+  "pattern": [
+    "LMH",
+    "SPS",
+    "HML"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:repair_talisman"
+  }
+}

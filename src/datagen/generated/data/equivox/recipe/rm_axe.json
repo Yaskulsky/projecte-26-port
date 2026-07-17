@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "equivox:dm_axe",
+    "M": "equivox:dark_matter",
+    "R": "equivox:red_matter"
+  },
+  "pattern": [
+    "RR",
+    "RA",
+    " M"
+  ],
+  "result": {
+    "id": "equivox:rm_axe"
+  }
+}

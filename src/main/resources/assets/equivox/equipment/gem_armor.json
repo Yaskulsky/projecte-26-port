@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "equivox:gem_armor"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "equivox:gem_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "equivox:gem_armor"
+      }
+    ]
+  }
+}

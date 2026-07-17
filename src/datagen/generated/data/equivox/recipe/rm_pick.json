@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": "equivox:dark_matter",
+    "P": "equivox:dm_pick",
+    "R": "equivox:red_matter"
+  },
+  "pattern": [
+    "RRR",
+    " P ",
+    " M "
+  ],
+  "result": {
+    "id": "equivox:rm_pick"
+  }
+}

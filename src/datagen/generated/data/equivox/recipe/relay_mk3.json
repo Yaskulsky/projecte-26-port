@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": "#c:obsidians/normal",
+    "P": "equivox:relay_mk2",
+    "U": "equivox:red_matter"
+  },
+  "pattern": [
+    "OUO",
+    "OPO",
+    "OOO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:relay_mk3"
+  }
+}

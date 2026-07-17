@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "equivox:dark_matter",
+    "I": "equivox:iron_band",
+    "S": "#c:strings"
+  },
+  "pattern": [
+    "SSS",
+    "DID",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:black_hole_band"
+  }
+}

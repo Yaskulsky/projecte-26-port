@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "equivox:dark_matter",
+    "F": "#c:feathers",
+    "I": "equivox:iron_band"
+  },
+  "pattern": [
+    "DFD",
+    "FIF",
+    "DFD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:swiftwolf_rending_gale"
+  }
+}

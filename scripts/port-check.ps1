@@ -1,4 +1,4 @@
-# ProjectE 26.1 port - static scan + optional compile + JAR verify
+# Equivox 26.1 port - static scan + optional compile + JAR verify
 param(
     [switch]$Build,
     [switch]$VerifyJar,
@@ -9,7 +9,7 @@ $ErrorActionPreference = "Continue"
 $root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 Set-Location $root
 
-$jar = Get-ChildItem (Join-Path $root "build\libs") -Filter "projectee-*.jar" -ErrorAction SilentlyContinue |
+$jar = Get-ChildItem (Join-Path $root "build\libs") -Filter "equivox-*.jar" -ErrorAction SilentlyContinue |
     Where-Object { $_.Name -notmatch 'sources|api' } |
     Sort-Object LastWriteTime -Descending |
     Select-Object -First 1
@@ -19,7 +19,7 @@ if (-not $jar) {
         Sort-Object LastWriteTime -Descending |
         Select-Object -First 1
 }
-$jar = if ($jar) { $jar.FullName } else { Join-Path $root "build\libs\projectee-1.2.2.jar" }
+$jar = if ($jar) { $jar.FullName } else { Join-Path $root "build\libs\equivox-1.2.2.jar" }
 $src = Join-Path $root "src\main\java"
 
 function Write-Finding($severity, $message) {
@@ -32,7 +32,7 @@ function Add-Finding($severity, $pattern, $file, $line) {
     $script:findings += [pscustomobject]@{ Severity = $severity; Pattern = $pattern; File = $file; Line = $line }
 }
 
-Write-Host "=== ProjectE port-check ===" -ForegroundColor Cyan
+Write-Host "=== Equivox port-check ===" -ForegroundColor Cyan
 
 # --- Grep scans (rg if available, else Select-String) ---
 $patterns = @(
@@ -76,8 +76,8 @@ foreach ($p in $patterns) {
 
 # EMC data files
 $dataChecks = @(
-    "src\datagen\generated\data\projecte\pe_custom_conversions\defaults.json",
-    "src\datagen\generated\data\projecte\pe_world_transmutations\defaults.json"
+    "src\datagen\generated\data\equivox\pe_custom_conversions\defaults.json",
+    "src\datagen\generated\data\equivox\pe_world_transmutations\defaults.json"
 )
 foreach ($rel in $dataChecks) {
     $path = Join-Path $root $rel
@@ -123,9 +123,9 @@ if ($VerifyJar) {
     $tar = Get-Command tar -ErrorAction SilentlyContinue
     if ($tar) {
         $samples = @(
-            "assets/projecte/items/dm_axe.json",
-            "assets/projecte/items/philosophers_stone.json",
-            "data/projecte/pe_custom_conversions/defaults.json"
+            "assets/equivox/items/dm_axe.json",
+            "assets/equivox/items/philosophers_stone.json",
+            "data/equivox/pe_custom_conversions/defaults.json"
         )
         $ok = $true
         foreach ($entry in $samples) {

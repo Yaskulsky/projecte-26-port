@@ -1,7 +1,7 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
-import moze_intel.projecte.UpdateJson
+import com.yaskulsky.equivox.UpdateJson
 
 import java.util.function.Consumer
 
@@ -110,7 +110,7 @@ static void extendConfigurations(Configuration base, Configuration... configurat
 }
 
 def replaceResources = tasks.register("replaceResources", Copy) {
-    def versionProperties = ["version": projecte_version, "mc_version": minecraft_version_range, "neo_version": neo_version_range, "loader_version": loader_version_range]
+    def versionProperties = ["version": equivox_version, "mc_version": minecraft_version_range, "neo_version": neo_version_range, "loader_version": loader_version_range]
     inputs.properties(versionProperties)
     def modsToml = copySpec {
         from(sourceSets.main.resources) {
@@ -137,9 +137,9 @@ def replaceResources = tasks.register("replaceResources", Copy) {
     }
 }
 
-version = "${projecte_version}"
-group = "moze_intel.projecte"
-project.base.archivesName = "projectee"
+version = "${equivox_version}"
+group = "com.yaskulsky.equivox"
+project.base.archivesName = "equivox"
 
 java {
     toolchain {
@@ -161,11 +161,11 @@ neoForge {
     )
 
     mods {
-        projecte {
+        equivox {
             sourceSet(sourceSets.main)
             sourceSet(sourceSets.api)
         }
-        projecte_datagen {
+        equivox_datagen {
             sourceSet(sourceSets.main)
             sourceSet(sourceSets.api)
             sourceSet(sourceSets.datagen)
@@ -174,8 +174,8 @@ neoForge {
 
     unitTest {
         enable()
-        testedMod = mods.projecte
-        loadedMods = [mods.projecte]
+        testedMod = mods.equivox
+        loadedMods = [mods.equivox]
     }
 }
 
@@ -186,7 +186,7 @@ neoForge.runs {
             // or eclipse's plugin that adds support for ansi escape in console
             systemProperties.put('terminal.ansi', (String) property('forge_force_ansi'))
         }
-        systemProperties.put('projecte.skip_top', "true")
+        systemProperties.put('equivox.skip_top', "true")
 
         //if the selected toolchain is a JBR, enable DCEVM
         if (javaToolchains.launcherFor(java.toolchain).map { it.metadata.vendor }.getOrElse('').contains('JetBrains')) {
@@ -215,18 +215,18 @@ neoForge.runs {
     data {
         serverData()
         programArguments.addAll('--all', '--output', project.file('src/datagen/generated/').getAbsolutePath(),
-                '--mod', 'projecte', '--existing', project.file('src/main/resources/').getAbsolutePath())
+                '--mod', 'equivox', '--existing', project.file('src/main/resources/').getAbsolutePath())
 
         sourceSet = sourceSets.runData
-        loadedMods = [neoForge.mods.projecte_datagen]
+        loadedMods = [neoForge.mods.equivox_datagen]
     }
     clientData {
         clientData()
         programArguments.addAll('--all', '--output', project.file('src/datagen/generated/').getAbsolutePath(),
-                '--mod', 'projecte', '--existing', project.file('src/main/resources/').getAbsolutePath())
+                '--mod', 'equivox', '--existing', project.file('src/main/resources/').getAbsolutePath())
 
         sourceSet = sourceSets.runData
-        loadedMods = [neoForge.mods.projecte_datagen]
+        loadedMods = [neoForge.mods.equivox_datagen]
     }
 }
 
@@ -328,14 +328,14 @@ tasks.named('classes') { dependsOn(replaceResources) }
 
 def getManifestAttributes() {
     return [
-            "Specification-Title"     : "ProjectE",
-            "Specification-Vendor"    : "ProjectE",
-            "Specification-Version"   : "${project.projecte_version}",
-            "Implementation-Title"    : "ProjectE",
-            "Implementation-Version"  : "${project.projecte_version}",
-            "Implementation-Vendor"   : "ProjectE",
+            "Specification-Title"     : "Equivox",
+            "Specification-Vendor"    : "Equivox",
+            "Specification-Version"   : "${project.equivox_version}",
+            "Implementation-Title"    : "Equivox",
+            "Implementation-Version"  : "${project.equivox_version}",
+            "Implementation-Vendor"   : "Equivox",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-            "Automatic-Module-Name"   : "projecte"
+            "Automatic-Module-Name"   : "equivox"
     ]
 }
 
@@ -374,7 +374,7 @@ def shadowJar = tasks.named('shadowJar', ShadowJar) {
     exclude('META-INF/maven/**')
     exclude('META-INF/*.txt')
     // Relocate apache commons-math3 to prevent conflicts with other mods that include it
-    relocate('org.apache.commons.math3', 'moze_intel.projecte.shaded.org.apache.commons.math3')
+    relocate('org.apache.commons.math3', 'com.yaskulsky.equivox.shaded.org.apache.commons.math3')
     // Minimize the required files so we only include what is needed
     minimize()
 }
@@ -407,17 +407,17 @@ publishing {
             publication.from((SoftwareComponent) components.shadow)
             publication.groupId = project.group
             publication.version = project.version
-            publication.artifactId = 'ProjectE'
+            publication.artifactId = 'Equivox'
             publication.artifacts = [apiJar, shadowJar, sourcesJar]
             publication.pom {
-                name.set('ProjectE')
+                name.set('Equivox')
                 packaging = 'jar'
                 scm {
-                    url.set('https://github.com/sinkillerj/ProjectE.git')
+                    url.set('https://github.com/Yaskulsky/projecte-26-port.git')
                 }
                 issueManagement {
                     system.set('github')
-                    url.set('https://github.com/sinkillerj/ProjectE/issues')
+                    url.set('https://github.com/Yaskulsky/projecte-26-port/issues')
                 }
                 licenses {
                     license {

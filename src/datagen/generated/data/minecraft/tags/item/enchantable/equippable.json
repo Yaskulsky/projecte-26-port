@@ -1,17 +1,17 @@
 {
   "remove": [
-    "projecte:dm_helmet",
-    "projecte:rm_helmet",
-    "projecte:gem_helmet",
-    "projecte:dm_chestplate",
-    "projecte:rm_chestplate",
-    "projecte:gem_chestplate",
-    "projecte:dm_leggings",
-    "projecte:rm_leggings",
-    "projecte:gem_leggings",
-    "projecte:dm_boots",
-    "projecte:rm_boots",
-    "projecte:gem_boots"
+    "equivox:dm_helmet",
+    "equivox:rm_helmet",
+    "equivox:gem_helmet",
+    "equivox:dm_chestplate",
+    "equivox:rm_chestplate",
+    "equivox:gem_chestplate",
+    "equivox:dm_leggings",
+    "equivox:rm_leggings",
+    "equivox:gem_leggings",
+    "equivox:dm_boots",
+    "equivox:rm_boots",
+    "equivox:gem_boots"
   ],
   "values": []
 }

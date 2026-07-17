@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "equivox:dm_leggings",
+    "M": "equivox:red_matter"
+  },
+  "pattern": [
+    "MMM",
+    "MDM",
+    "M M"
+  ],
+  "result": {
+    "id": "equivox:rm_leggings"
+  }
+}

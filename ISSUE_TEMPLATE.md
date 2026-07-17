@@ -1,6 +1,6 @@
 **Tickets that do not conform to this template will be closed without comment**
 
-Exact ProjectE version (do not say "latest", "latest on Curse", or similar): 
+Exact Equivox version (do not say "latest", "latest on Curse", or similar): 
 
 Exact Forge version:
 

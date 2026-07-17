@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "equivox:klein_star_sphere",
+    "equivox:klein_star_sphere",
+    "equivox:klein_star_sphere",
+    "equivox:klein_star_sphere"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:klein_star_omega"
+  }
+}

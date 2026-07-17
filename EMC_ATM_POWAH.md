@@ -1,6 +1,6 @@
 # EMC values — Allthemodium & Powah (bundled in mod)
 
-File: `data/projecte/pe_custom_conversions/atm_powah_compat.json`
+File: `data/equivox/pe_custom_conversions/atm_powah_compat.json`
 
 ## Powah baseline
 
@@ -28,7 +28,7 @@ Crystal ladder: each tier ×4 from the previous (blazing → niotic → spirited
 
 ### Energy storage (tier proxy)
 
-**ProjectE does not read FE from NBT.** Cell/battery EMC follows tier multiples of steel, aligned with Powah storage tiers (also ~1000 FE = 1 EMC on max capacity).
+**Equivox does not read FE from NBT.** Cell/battery EMC follows tier multiples of steel, aligned with Powah storage tiers (also ~1000 FE = 1 EMC on max capacity).
 
 | Item | × steel | EMC |
 |------|---------|-----|
@@ -63,7 +63,7 @@ Each storage tier: **×4** from the previous (matches Powah cell upgrades).
 | block | ingot × 9 |
 | raw | ~75% ingot |
 
-Reference: ProjectE Integration (Allthemodium ingot 122800).
+Reference: Equivox Integration (Allthemodium ingot 122800).
 
 ---
 

@@ -1,0 +1,32 @@
+{
+  "parent": "equivox:philosophers_stone",
+  "criteria": {
+    "trans_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "equivox:transmutation_table"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.equivox.transmutation_table.description"
+    },
+    "icon": {
+      "id": "equivox:transmutation_table"
+    },
+    "title": {
+      "translate": "advancements.equivox.transmutation_table"
+    }
+  },
+  "requirements": [
+    [
+      "trans_table"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "equivox:philosophers_stone",
+    "equivox:mobius_fuel",
+    "equivox:mobius_fuel",
+    "equivox:mobius_fuel",
+    "equivox:mobius_fuel"
+  ],
+  "result": {
+    "id": "equivox:aeternalis_fuel"
+  }
+}

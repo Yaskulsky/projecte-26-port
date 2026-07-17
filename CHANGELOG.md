@@ -1,6 +1,39 @@
-# Changelog — ProjectE (Unofficial 26.1.2 port)
+# Changelog — Equivox
 
 All notable changes to [Yaskulsky/projecte-26-port](https://github.com/Yaskulsky/projecte-26-port) are documented here.
+
+## [1.0.0] — 2026-07-17
+
+Equivox public starting version (versioning restarted at 1.0 after the Equivox rebrand). Earlier fork builds used 1.2.x–1.5.0 numbering.
+
+### Changed
+- **Full rebrand to Equivox** — `modId` `equivox`, display name / creative tab **Equivox**, Java package `com.yaskulsky.equivox`, assets/data namespace `equivox`, JAR `equivox-*.jar`, config folder `config/Equivox`.
+- Primary command is `/equivox` (was `/equivalence`).
+
+### Added
+- **Legacy `equivalence:` ID aliases** — worlds that ran Equivalence 1.4.0 keep resolving `equivalence:*` → `equivox:*`.
+- Existing **`projecte:` → `equivox:*`** aliases retained. `/projecte` and `/equivalence` redirect to `/equivox`.
+
+### Note
+Breaking rename from Equivalence 1.4.x. Not affiliated with or endorsed by the ProjectE authors.
+
+---
+
+## [1.4.0] — 2026-07-16
+
+### Changed
+- **Full rebrand to Equivalence** — `modId` `equivalence`, display name / creative tab **Equivalence**, Java package `com.yaskulsky.equivalence`, assets/data namespace `equivalence`, JAR `equivalence-*.jar`.
+- Authors / mods.toml identity updated (Yaskulsky); upstream ProjectE authors credited in LICENSE / credits only.
+- Update checker / docs no longer point at the official ProjectE CurseForge project as this mod.
+
+### Added
+- **Legacy `projecte:` ID aliases** — `DeferredRegister#addAlias` maps old `projecte:*` registry IDs to `equivalence:*` (items, blocks, block entities, menus, sounds, data components, attachments, etc.) so existing worlds can migrate after the rebrand. `/projecte` redirects to `/equivalence`.
+
+### Note
+Not affiliated with or endorsed by the ProjectE authors. Forked from their MIT-licensed codebase after a request to stop using the ProjectE name.
+Datapack paths (`data/projecte/...`), config folder (`config/ProjectE` vs `config/Equivalence`), and other mods depending on modId `projecte` are **not** covered by registry aliases.
+
+---
 
 ## [1.3.0] — 2026-07-15
 
@@ -40,7 +73,7 @@ All notable changes to [Yaskulsky/projecte-26-port](https://github.com/Yaskulsky
 
 ## [1.2.2] — earlier releases
 
-Unofficial community port of ProjectE for Minecraft **26.1.2** / **NeoForge**.  
+Unofficial community port for Minecraft **26.1.2** / **NeoForge**.  
 Maintainer: **Yaskulsky**
 
 See git history for prior changes.

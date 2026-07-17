@@ -1,0 +1,197 @@
+{
+  "comment": "Sets default conversions for various metals from other mods and their default values.",
+  "values": {
+    "before": [
+      {
+        "type": "equivox:item",
+        "emc_value": 256,
+        "tag": "c:ingots/iron"
+      },
+      {
+        "type": "equivox:item",
+        "emc_value": 4096,
+        "tag": "c:ingots/uranium"
+      },
+      {
+        "type": "equivox:item",
+        "emc_value": 32,
+        "tag": "c:gems/amethyst"
+      },
+      {
+        "type": "equivox:item",
+        "emc_value": 2048,
+        "tag": "c:gems/ruby"
+      },
+      {
+        "type": "equivox:item",
+        "emc_value": 2048,
+        "tag": "c:gems/sapphire"
+      },
+      {
+        "type": "equivox:item",
+        "emc_value": 2048,
+        "tag": "c:gems/peridot"
+      }
+    ],
+    "conversion": [
+      {
+        "ingredients": [
+          {
+            "type": "equivox:item",
+            "amount": 8,
+            "tag": "c:ingots/iron"
+          }
+        ],
+        "output": {
+          "type": "equivox:item",
+          "tag": "c:ingots/gold"
+        },
+        "propagateTags": true
+      },
+      {
+        "count": 2,
+        "ingredients": [
+          {
+            "type": "equivox:item",
+            "tag": "c:ingots/iron"
+          }
+        ],
+        "output": {
+          "type": "equivox:item",
+          "tag": "c:ingots/copper"
+        },
+        "propagateTags": true
+      },
+      {
+        "ingredients": [
+          {
+            "type": "equivox:item",
+            "tag": "c:ingots/iron"
+          }
+        ],
+        "output": {
+          "type": "equivox:item",
+          "tag": "c:ingots/tin"
+        },
+        "propagateTags": true
+      },
+      {
+        "count": 4,
+        "ingredients": [
+          {
+            "type": "equivox:item",
+            "amount": 3,
+            "tag": "c:ingots/copper"
+          },
+          {
+            "type": "equivox:item",
+            "tag": "c:ingots/tin"
+          }
+        ],
+        "output": {
+          "type": "equivox:item",
+          "tag": "c:ingots/bronze"
+        },
+        "propagateTags": true
+      },
+      {
+        "ingredients": [
+          {
+            "type": "equivox:item",
+            "amount": 2,
+            "tag": "c:ingots/iron"
+          }
+        ],
+        "output": {
+          "type": "equivox:item",
+          "tag": "c:ingots/silver"
+        },
+        "propagateTags": true
+      },
+      {
+        "ingredients": [
+          {
+            "type": "equivox:item",
+            "amount": 2,
+            "tag": "c:ingots/iron"
+          }
+        ],
+        "output": {
+          "type": "equivox:item",
+          "tag": "c:ingots/lead"
+        },
+        "propagateTags": true
+      },
+      {
+        "ingredients": [
+          {
+            "type": "equivox:item",
+            "amount": 2,
+            "tag": "c:ingots/iron"
+          }
+        ],
+        "output": {
+          "type": "equivox:item",
+          "tag": "c:ingots/osmium"
+        },
+        "propagateTags": true
+      },
+      {
+        "ingredients": [
+          {
+            "type": "equivox:item",
+            "amount": 4,
+            "tag": "c:ingots/iron"
+          }
+        ],
+        "output": {
+          "type": "equivox:item",
+          "tag": "c:ingots/nickel"
+        },
+        "propagateTags": true
+      },
+      {
+        "count": 2,
+        "ingredients": [
+          {
+            "type": "equivox:item",
+            "tag": "c:ingots/iron"
+          }
+        ],
+        "output": {
+          "type": "equivox:item",
+          "tag": "c:ingots/aluminum"
+        },
+        "propagateTags": true
+      },
+      {
+        "ingredients": [
+          {
+            "type": "equivox:item",
+            "amount": 16,
+            "tag": "c:ingots/iron"
+          }
+        ],
+        "output": {
+          "type": "equivox:item",
+          "tag": "c:ingots/platinum"
+        },
+        "propagateTags": true
+      },
+      {
+        "count": 4,
+        "ingredients": [
+          {
+            "type": "equivox:item",
+            "tag": "c:ingots/uranium"
+          }
+        ],
+        "output": {
+          "type": "equivox:item",
+          "tag": "c:ingots/cyanite"
+        },
+        "propagateTags": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "equivox:dark_matter",
+    "W": "minecraft:water_bucket"
+  },
+  "pattern": [
+    "WWW",
+    "DDD",
+    "WWW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:evertide_amulet"
+  }
+}

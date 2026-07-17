@@ -1,0 +1,32 @@
+{
+  "parent": "equivox:transmutation_table",
+  "criteria": {
+    "trans_tablet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "equivox:transmutation_tablet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.equivox.transmutation_tablet.description"
+    },
+    "icon": {
+      "id": "equivox:transmutation_tablet"
+    },
+    "title": {
+      "translate": "advancements.equivox.transmutation_tablet"
+    }
+  },
+  "requirements": [
+    [
+      "trans_tablet"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

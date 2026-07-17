@@ -15,11 +15,11 @@ PROMPT_TEMPLATES: dict[str, str] = {
     ),
     "dm_tool": (
         "Minecraft 16x16 pixel art tool icon, dark matter {tool}, charcoal metal "
-        "with cyan energy veins, ProjectE mod style, transparent background"
+        "with cyan energy veins, Equivox mod style, transparent background"
     ),
     "ring": (
         "Minecraft 16x16 pixel art ring icon, {name}, gold band with glowing "
-        "{gem_color} gem center, ProjectE magical ring, transparent background"
+        "{gem_color} gem center, Equivox magical ring, transparent background"
     ),
     "block_collector": (
         "Minecraft block texture 16x16 tile, energy collector mk{mk}, dark casing "

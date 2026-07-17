@@ -1,0 +1,32 @@
+{
+  "parent": "equivox:alchemical_chest",
+  "criteria": {
+    "bag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#equivox:alchemical_bags"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.equivox.alch_bag.description"
+    },
+    "icon": {
+      "id": "equivox:white_alchemical_bag"
+    },
+    "title": {
+      "translate": "advancements.equivox.alch_bag"
+    }
+  },
+  "requirements": [
+    [
+      "bag"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

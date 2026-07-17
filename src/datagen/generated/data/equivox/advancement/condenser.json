@@ -1,0 +1,32 @@
+{
+  "parent": "equivox:alchemical_chest",
+  "criteria": {
+    "condenser": {
+      "conditions": {
+        "items": [
+          {
+            "items": "equivox:condenser_mk1"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.equivox.condenser.description"
+    },
+    "icon": {
+      "id": "equivox:condenser_mk1"
+    },
+    "title": {
+      "translate": "advancements.equivox.condenser"
+    }
+  },
+  "requirements": [
+    [
+      "condenser"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

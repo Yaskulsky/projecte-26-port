@@ -1,8 +1,8 @@
 {
   "remove": [
-    "projecte:dm_sword",
-    "projecte:rm_sword",
-    "projecte:rm_katar"
+    "equivox:dm_sword",
+    "equivox:rm_sword",
+    "equivox:rm_katar"
   ],
   "values": []
 }

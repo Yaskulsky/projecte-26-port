@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "#equivox:alchemical_bags",
+    "#c:dyes/lime"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:lime_alchemical_bag"
+  }
+}

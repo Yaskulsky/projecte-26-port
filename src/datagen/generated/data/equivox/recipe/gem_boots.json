@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "equivox:full_klein_stars"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "equivox:rm_boots",
+    "equivox:swiftwolf_rending_gale",
+    "equivox:swiftwolf_rending_gale",
+    "equivox:klein_star_omega"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:gem_boots"
+  }
+}

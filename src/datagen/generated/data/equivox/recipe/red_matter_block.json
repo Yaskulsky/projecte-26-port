@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "M": "equivox:red_matter"
+  },
+  "pattern": [
+    "MM",
+    "MM"
+  ],
+  "result": {
+    "id": "equivox:red_matter_block"
+  }
+}

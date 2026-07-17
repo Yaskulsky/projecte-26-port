@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": "minecraft:flint_and_steel",
+    "M": "equivox:mobius_fuel",
+    "N": "equivox:nova_catalyst"
+  },
+  "pattern": [
+    "NMN",
+    "MFM",
+    "NMN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:destruction_catalyst"
+  }
+}

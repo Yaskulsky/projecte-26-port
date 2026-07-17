@@ -1,4 +1,4 @@
-# ProjectE Texture Studio
+# Equivox Texture Studio
 
 Narzedzie do **porzadnej** pracy nad teksturami — nie generuje koleczek z PowerShella.
 
@@ -15,7 +15,7 @@ Tworzy venv w `scripts/texture-studio/.venv` i instaluje Pillow.
 ```powershell
 .\scripts\texture-studio\run.ps1 preview
 .\scripts\texture-studio\run.ps1 validate
-.\scripts\texture-studio\run.ps1 klein-tiers -m src\main\resources\assets\projecte\textures\item\stars\klein_star_6.png -o build\klein-test
+.\scripts\texture-studio\run.ps1 klein-tiers -m src\main\resources\assets\equivox\textures\item\stars\klein_star_6.png -o build\klein-test
 .\scripts\texture-studio\run.ps1 remap -i src\...\pickaxe.png -o build\dm_pick.png -t dm
 .\scripts\texture-studio\run.ps1 ai-prompts -o build\ai-prompts
 ```
@@ -45,6 +45,6 @@ Tworzy venv w `scripts/texture-studio/.venv` i instaluje Pillow.
 
 ## Prawa
 
-- Remap **oryginalnych** tekstur ProjectE (MIT) = OK do moda.
+- Remap **oryginalnych** tekstur Equivox (MIT) = OK do moda.
 - Nie trenuj AI na assetach Bbublick (ARR).
 - Finalny pixel-art w edytorze = twoje dzielo.

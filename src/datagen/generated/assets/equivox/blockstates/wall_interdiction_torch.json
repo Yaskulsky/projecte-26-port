@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "equivox:block/wall_interdiction_torch"
+    },
+    "facing=north": {
+      "model": "equivox:block/wall_interdiction_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "equivox:block/wall_interdiction_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "equivox:block/wall_interdiction_torch",
+      "y": 180
+    }
+  }
+}

@@ -1,4 +1,4 @@
-# Parse ATM11 latest.log for ProjectE / port-related issues
+# Parse ATM11 latest.log for Equivox / port-related issues
 param(
     [string]$LogPath = "C:\CurseForge\Instances\All the Mods 11 - ATM11\logs\latest.log",
     [int]$TailLines = 0
@@ -12,13 +12,13 @@ if (-not (Test-Path $LogPath)) {
 $patterns = @(
     @{ Name = "EMC registration"; Regex = "\[projecte\].*Registered \d+ EMC|Registered \d+ EMC values"; Color = "Green" },
     @{ Name = "EMC zero"; Regex = "\[projecte\].*Registered 0 EMC|Registered 0 EMC"; Color = "Red" },
-    @{ Name = "ProjectE errors"; Regex = "\[projecte\].*ERROR|projecte.*Exception"; Color = "Red" },
+    @{ Name = "Equivox errors"; Regex = "\[projecte\].*ERROR|projecte.*Exception"; Color = "Red" },
     @{ Name = "Zip/JAR corrupt"; Regex = "ZipFile|invalid LOC header|bad signature"; Color = "Red" },
     @{ Name = "Missing item model"; Regex = "Failed to open item model projecte"; Color = "Red" },
-    @{ Name = "ProjectE registry"; Regex = "projecte.*Missing registry|SlotPredicates.*Missing registry"; Color = "Red" },
+    @{ Name = "Equivox registry"; Regex = "projecte.*Missing registry|SlotPredicates.*Missing registry"; Color = "Red" },
     @{ Name = "Components not bound"; Regex = "Components not bound"; Color = "Red" },
     @{ Name = "Rendering screen crash"; Regex = "Rendering screen.*projecte|AbstractCondenserScreen"; Color = "Red" },
-    @{ Name = "ProjectE load"; Regex = "\[projecte\]"; Color = "Cyan" }
+    @{ Name = "Equivox load"; Regex = "\[projecte\]"; Color = "Cyan" }
 )
 
 Write-Host "=== Log triage: $LogPath ===" -ForegroundColor Cyan
@@ -41,7 +41,7 @@ foreach ($p in $patterns) {
 
 if (-not $found) {
     Write-Host "No known port patterns matched. Grep projecte manually:" -ForegroundColor Yellow
-    $content | Select-String -Pattern "projecte" -CaseSensitive:$false | Select-Object -Last 15 | ForEach-Object {
+    $content | Select-String -Pattern "equivox" -CaseSensitive:$false | Select-Object -Last 15 | ForEach-Object {
         Write-Host "  $($_.Line.Trim())"
     }
 }

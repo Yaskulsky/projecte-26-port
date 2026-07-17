@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": "minecraft:glowstone",
+    "P": "equivox:collector_mk2",
+    "U": "equivox:red_matter"
+  },
+  "pattern": [
+    "GUG",
+    "GPG",
+    "GGG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:collector_mk3"
+  }
+}

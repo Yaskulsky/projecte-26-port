@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "equivox:block/relay_mk2",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "equivox:block/relay_mk2"
+    },
+    "facing=south": {
+      "model": "equivox:block/relay_mk2",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "equivox:block/relay_mk2",
+      "y": 270
+    }
+  }
+}

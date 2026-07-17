@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "equivox:klein_star_zwei",
+    "equivox:klein_star_zwei",
+    "equivox:klein_star_zwei",
+    "equivox:klein_star_zwei"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:klein_star_drei"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "equivox:block/base_chest",
+  "textures": {
+    "chest": "equivox:block/condenser_mk2"
+  }
+}

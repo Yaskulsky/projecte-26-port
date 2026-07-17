@@ -1,0 +1,32 @@
+{
+  "parent": "equivox:red_matter_block",
+  "criteria": {
+    "rm_furnace": {
+      "conditions": {
+        "items": [
+          {
+            "items": "equivox:rm_furnace"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.equivox.red_matter_furnace.description"
+    },
+    "icon": {
+      "id": "equivox:rm_furnace"
+    },
+    "title": {
+      "translate": "advancements.equivox.red_matter_furnace"
+    }
+  },
+  "requirements": [
+    [
+      "rm_furnace"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

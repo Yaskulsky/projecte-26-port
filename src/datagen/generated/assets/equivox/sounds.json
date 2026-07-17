@@ -1,0 +1,50 @@
+{
+  "charge": {
+    "sounds": [
+      "equivox:item/pecharge"
+    ],
+    "subtitle": "sound_event.equivox.charge"
+  },
+  "destruct": {
+    "sounds": [
+      "equivox:item/pedestruct"
+    ],
+    "subtitle": "sound_event.equivox.destruct"
+  },
+  "heal": {
+    "sounds": [
+      "equivox:item/peheal"
+    ],
+    "subtitle": "sound_event.equivox.heal"
+  },
+  "power": {
+    "sounds": [
+      "equivox:item/pepower"
+    ],
+    "subtitle": "sound_event.equivox.power"
+  },
+  "transmute": {
+    "sounds": [
+      "equivox:item/petransmute"
+    ],
+    "subtitle": "sound_event.equivox.transmute"
+  },
+  "uncharge": {
+    "sounds": [
+      "equivox:item/peuncharge"
+    ],
+    "subtitle": "sound_event.equivox.uncharge"
+  },
+  "watermagic": {
+    "sounds": [
+      "equivox:item/pewatermagic"
+    ],
+    "subtitle": "sound_event.equivox.watermagic"
+  },
+  "windmagic": {
+    "sounds": [
+      "equivox:item/pewindmagic"
+    ],
+    "subtitle": "sound_event.equivox.windmagic"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": "equivox:dm_furnace",
+    "R": "equivox:red_matter_block"
+  },
+  "pattern": [
+    " R ",
+    "RFR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:rm_furnace"
+  }
+}

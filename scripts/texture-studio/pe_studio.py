@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""CLI for ProjectE texture studio."""
+"""CLI for Equivox texture studio."""
 
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ from pe_studio.prompt_gen import generate_prompt_files
 from pe_studio.remap import klein_tier_from_master, remap_image
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_TEX = REPO_ROOT / "src" / "main" / "resources" / "assets" / "projecte" / "textures"
+DEFAULT_TEX = REPO_ROOT / "src" / "main" / "resources" / "assets" / "equivox" / "textures"
 
 
 def _repo_tex() -> Path:
@@ -73,7 +73,7 @@ def cmd_generate_pack(args: argparse.Namespace) -> int:
     rp = out.parent.parent / "pe-art-pack-resourcepack"
     if rp.exists():
         _shutil.rmtree(rp)
-    rp_assets = rp / "assets" / "projecte" / "textures"
+    rp_assets = rp / "assets" / "equivox" / "textures"
     rp_assets.parent.mkdir(parents=True, exist_ok=True)
     _shutil.copytree(out, rp_assets)
     write_resource_pack_meta(rp)
@@ -205,7 +205,7 @@ def cmd_apply_variant(args: argparse.Namespace) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(description="ProjectE texture studio")
+    p = argparse.ArgumentParser(description="Equivox texture studio")
     sub = p.add_subparsers(dest="cmd", required=True)
 
     r = sub.add_parser("remap", help="Remap one PNG with a PE theme")

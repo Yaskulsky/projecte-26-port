@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": "equivox:dm_hoe",
+    "M": "equivox:dark_matter",
+    "R": "equivox:red_matter"
+  },
+  "pattern": [
+    "RR",
+    " H",
+    " M"
+  ],
+  "result": {
+    "id": "equivox:rm_hoe"
+  }
+}

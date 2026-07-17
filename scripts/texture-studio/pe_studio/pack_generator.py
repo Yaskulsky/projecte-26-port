@@ -1,4 +1,4 @@
-"""Generate full ProjectE art pack from repo masters."""
+"""Generate full Equivox art pack from repo masters."""
 
 from __future__ import annotations
 
@@ -122,7 +122,7 @@ def generate_pack(src_root: Path, out_root: Path, install_mod: Path | None = Non
             stats["keep"] += 1
 
     # Curios slot icon from klein tier 1.
-    # Curios expects slot sprites in the GUI atlas under `projecte:slot/...`.
+    # Curios expects slot sprites in the GUI atlas under `equivox:slot/...`.
     slot = out_root / "slot" / "empty_klein_star.png"
     k1 = out_root / "item" / "stars" / "klein_star_1.png"
     if k1.exists():
@@ -139,7 +139,7 @@ def generate_pack(src_root: Path, out_root: Path, install_mod: Path | None = Non
     return stats
 
 
-def write_resource_pack_meta(pack_dir: Path, name: str = "ProjectE Original Art") -> None:
+def write_resource_pack_meta(pack_dir: Path, name: str = "Equivox Original Art") -> None:
     pack_dir.mkdir(parents=True, exist_ok=True)
     meta = {
         "pack": {

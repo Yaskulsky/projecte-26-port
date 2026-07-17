@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "equivox:dm_chestplate",
+    "M": "equivox:red_matter"
+  },
+  "pattern": [
+    "MDM",
+    "MMM",
+    "MMM"
+  ],
+  "result": {
+    "id": "equivox:rm_chestplate"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "#c:gems/diamond",
+    "M": "equivox:dark_matter",
+    "N": "equivox:nova_catalyst"
+  },
+  "pattern": [
+    "DDD",
+    "MNM",
+    "DDD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "equivox:hyperkinetic_lens"
+  }
+}

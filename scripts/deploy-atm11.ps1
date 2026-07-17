@@ -1,4 +1,4 @@
-# Build ProjectEE, verify JAR, deploy numbered build to ATM11 (Minecraft must be closed)
+# Build Equivox, verify JAR, deploy numbered build to ATM11 (Minecraft must be closed)
 param(
     [switch]$SkipBuild,
     [switch]$Force
@@ -14,8 +14,8 @@ Set-Location $root
 
 function Get-ModVersion {
     $props = Get-Content (Join-Path $root "gradle.properties") -Raw
-    if ($props -match 'projecte_version=(.+)') { return $Matches[1].Trim() }
-    throw "projecte_version not found in gradle.properties"
+    if ($props -match 'equivox_version=(.+)') { return $Matches[1].Trim() }
+    throw "equivox_version not found in gradle.properties"
 }
 
 function Get-BuildNumber {
@@ -32,8 +32,8 @@ function Get-BuildNumber {
 $version = Get-ModVersion
 $buildNum = Get-BuildNumber
 $buildTag = "b{0:D3}" -f $buildNum
-$baseJar = Join-Path $root "build\libs\projectee-$version.jar"
-$numberedJar = "projectee-$version-$buildTag.jar"
+$baseJar = Join-Path $root "build\libs\equivox-$version.jar"
+$numberedJar = "equivox-$version-$buildTag.jar"
 $dest = Join-Path $destDir $numberedJar
 
 $running = Get-Process -ErrorAction SilentlyContinue | Where-Object {
@@ -49,7 +49,7 @@ if ($running -and -not $Force) {
 }
 
 if (-not $SkipBuild) {
-    Write-Host "=== Building ProjectEE $version ($buildTag) ===" -ForegroundColor Cyan
+    Write-Host "=== Building Equivox $version ($buildTag) ===" -ForegroundColor Cyan
     & .\gradlew.bat build -x test
     if ($LASTEXITCODE -ne 0) {
         if ($buildNum -gt 1) { Set-Content -Path $buildNumFile -Value ($buildNum - 1) -NoNewline }
@@ -75,9 +75,10 @@ if (-not (Test-Path $destDir)) {
 }
 
 Write-Host "=== Deploying $numberedJar ===" -ForegroundColor Cyan
-# Remove older ProjectE/ProjectEE jars to avoid duplicate mod loads
+# Remove older ProjectE/ProjectEE/Equivalence/Equivox jars to avoid duplicate mod loads
 Get-ChildItem $destDir -Filter "projecte*.jar" -ErrorAction SilentlyContinue | Remove-Item -Force
-Get-ChildItem $destDir -Filter "projectee*.jar" -ErrorAction SilentlyContinue | Remove-Item -Force
+Get-ChildItem $destDir -Filter "equivalence*.jar" -ErrorAction SilentlyContinue | Remove-Item -Force
+Get-ChildItem $destDir -Filter "equivox*.jar" -ErrorAction SilentlyContinue | Remove-Item -Force
 Copy-Item -Force $baseJar $dest
 Write-Host "Copied to $dest" -ForegroundColor Green
-Write-Host "ProjectEE v$version build $buildTag ready - start ATM11" -ForegroundColor Cyan
+Write-Host "Equivox v$version build $buildTag ready - start ATM11" -ForegroundColor Cyan

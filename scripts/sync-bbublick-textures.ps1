@@ -1,4 +1,4 @@
-# Sync Bbublick / Exchange Extended textures into ProjectEE
+# Sync Bbublick / Exchange Extended textures into Equivox
 # Usage: .\scripts\sync-bbublick-textures.ps1
 # Optional: .\scripts\sync-bbublick-textures.ps1 -Zip "C:\Users\harna\Desktop\something.zip"
 
@@ -8,7 +8,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
-$destTex = Join-Path $root "src\main\resources\assets\projecte\textures"
+$destTex = Join-Path $root "src\main\resources\assets\equivox\textures"
 $extract = Join-Path $root "build\_bbublick-extract"
 
 function Find-Zip {
@@ -42,11 +42,11 @@ New-Item -ItemType Directory -Path $extract -Force | Out-Null
 
 Expand-Archive -LiteralPath $zipPath -DestinationPath $extract -Force
 
-# Find assets/projecte/textures under extract
+# Find assets/equivox/textures under extract
 $srcTex = Get-ChildItem $extract -Recurse -Directory -Filter "textures" -ErrorAction SilentlyContinue |
     Where-Object {
         $_.FullName -match '[\\/]assets[\\/]projecte[\\/]textures$' -or
-        $_.Parent.Name -eq "projecte"
+        $_.Parent.Name -eq "equivox"
     } |
     Select-Object -First 1
 
@@ -62,7 +62,7 @@ if (-not $srcTex) {
 if (-not $srcTex) {
     Write-Host "Extract layout (top):" -ForegroundColor Yellow
     Get-ChildItem $extract -Recurse -Depth 3 | Select-Object -First 40 FullName
-    throw "Could not find assets/projecte/textures inside ZIP"
+    throw "Could not find assets/equivox/textures inside ZIP"
 }
 
 Write-Host "Source textures: $($srcTex.FullName)" -ForegroundColor Cyan

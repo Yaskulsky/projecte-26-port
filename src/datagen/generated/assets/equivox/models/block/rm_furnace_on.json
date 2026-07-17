@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "equivox:block/rm_furnace_front_on",
+    "side": "equivox:block/red_matter_block",
+    "top": "equivox:block/red_matter_block"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": "equivox:dark_matter"
+  },
+  "pattern": [
+    "M M",
+    "M M"
+  ],
+  "result": {
+    "id": "equivox:dm_boots"
+  }
+}
