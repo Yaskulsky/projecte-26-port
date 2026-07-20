@@ -12,7 +12,8 @@ Equivox public starting version (versioning restarted at 1.0 after the Equivox r
 
 ### Added
 - **Legacy `equivalence:` ID aliases** — worlds that ran Equivalence 1.4.0 keep resolving `equivalence:*` → `equivox:*`.
-- Existing **`projecte:` → `equivox:*`** aliases retained. `/projecte` and `/equivalence` redirect to `/equivox`.
+- Existing **`projecte:` → `equivox:*`** aliases retained (registry IDs only — no `/projecte` or `/equivalence` commands).
+- Commands: only **`/equivox`** (legacy `/projecte` and `/equivalence` redirects removed).
 
 ### Note
 Breaking rename from Equivalence 1.4.x. Not affiliated with or endorsed by the ProjectE authors.

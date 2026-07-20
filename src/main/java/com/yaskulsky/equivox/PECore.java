@@ -303,7 +303,7 @@ public class PECore {
 
 	private void registerCommands(RegisterCommandsEvent event) {
 		CommandBuildContext context = event.getBuildContext();
-		var equivox = event.getDispatcher().register(Commands.literal("equivox")
+		event.getDispatcher().register(Commands.literal("equivox")
 				.requires(PEPermissions.COMMAND)
 				.then(RemoveEmcCMD.register(context))
 				.then(ResetEmcCMD.register(context))
@@ -312,12 +312,6 @@ public class PECore {
 				.then(EMCCMD.register(context))
 				.then(KnowledgeCMD.register(context))
 		);
-		// Legacy ProjectE / ProjectEE and Equivalence 1.4.x command names
-		for (String legacyModId : LegacyIds.LEGACY_MODIDS) {
-			event.getDispatcher().register(Commands.literal(legacyModId)
-					.requires(PEPermissions.COMMAND)
-					.redirect(equivox));
-		}
 	}
 
 	private void serverStarting(ServerStartingEvent event) {

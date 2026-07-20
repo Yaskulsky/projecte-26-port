@@ -1,6 +1,5 @@
 package com.yaskulsky.equivox.client;
 
-import com.yaskulsky.equivox.LegacyIds;
 import com.yaskulsky.equivox.PECore;
 import com.yaskulsky.equivox.gameObjs.container.DMFurnaceContainer;
 import com.yaskulsky.equivox.gameObjs.entity.EntitySWRGProjectile;
@@ -71,13 +70,9 @@ public class PEClient {
 
 	private void registerClientCommands(RegisterClientCommandsEvent event) {
 		CommandBuildContext context = event.getBuildContext();
-		//Note: We can use equivox as the base command here as it will merge the trees properly
-		var equivox = event.getDispatcher().register(Commands.literal("equivox")
+		event.getDispatcher().register(Commands.literal("equivox")
 				.then(DumpMissingEmc.register(context))
 		);
-		for (String legacyModId : LegacyIds.LEGACY_MODIDS) {
-			event.getDispatcher().register(Commands.literal(legacyModId).redirect(equivox));
-		}
 	}
 
 	private void registerScreens(RegisterMenuScreensEvent event) {

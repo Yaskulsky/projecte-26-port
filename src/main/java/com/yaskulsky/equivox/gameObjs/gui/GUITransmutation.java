@@ -22,6 +22,8 @@ import net.minecraft.client.gui.components.Button;
 
 import net.minecraft.client.gui.components.EditBox;
 
+import net.minecraft.client.input.CharacterEvent;
+
 import net.minecraft.client.input.KeyEvent;
 
 import net.minecraft.client.input.MouseButtonEvent;
@@ -248,13 +250,29 @@ public class GUITransmutation extends PEContainerScreen<TransmutationContainer> 
 
 	@Override
 
+	public boolean charTyped(CharacterEvent event) {
+
+		if (textBoxFilter.canConsumeInput()) {
+
+			return textBoxFilter.charTyped(event);
+
+		}
+
+		return super.charTyped(event);
+
+	}
+
+
+
+	@Override
+
 	public boolean keyPressed(KeyEvent event) {
 
-		if (textBoxFilter.isFocused()) {
+		if (textBoxFilter.canConsumeInput()) {
 
 			if (event.isEscape()) {
 
-				textBoxFilter.setFocused(false);
+				setFocused(null);
 
 				return true;
 
@@ -282,6 +300,8 @@ public class GUITransmutation extends PEContainerScreen<TransmutationContainer> 
 
 			this.textBoxFilter.setValue("");
 
+			setFocused(this.textBoxFilter);
+
 			return true;
 
 		}
@@ -296,7 +316,7 @@ public class GUITransmutation extends PEContainerScreen<TransmutationContainer> 
 
 			if (hoveredSlot == null || (!hoveredSlot.hasItem() && menu.getCarried().isEmpty())) {
 
-				textBoxFilter.setFocused(false);
+				setFocused(null);
 
 			}
 
